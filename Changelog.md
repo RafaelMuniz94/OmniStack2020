@@ -1,3 +1,24 @@
+# [0.0.6] - 23/08/2020
+## Front-End and Back-End integration
+## Back-End add Cors
+## Babel plugin to work with async/await
+
+**Changed File**
+
+        modified:   Changelog.md
+        modified:   Semana 1/node/package.json
+        modified:   Semana 1/node/src/index.js
+        modified:   Semana 1/node/yarn.lock
+        modified:   Semana 1/react/babel.config.js
+        modified:   Semana 1/react/package.json
+        modified:   Semana 1/react/src/App.js
+        modified:   Semana 1/react/src/Components/Body.js
+        new file:   Semana 1/react/src/services/api.js
+        new file:   Semana 1/react/yarn-error.log
+        modified:   Semana 1/react/yarn.lock
+
+---
+
 # [0.0.5] - 22/08/2020
 ## React components
 ## Webpack
@@ -6,7 +27,22 @@
 
 **Changed File**
 
-
+        modified:   .gitignore
+        modified:   Changelog.md
+        modified:   Semana 1/react/package.json
+        deleted:    Semana 1/react/public/bundle.js
+        modified:   Semana 1/react/public/index.html
+        new file:   Semana 1/react/src/App.js
+        new file:   Semana 1/react/src/Assets/background.png
+        new file:   Semana 1/react/src/CSS/App.css
+        new file:   Semana 1/react/src/Components/Body.js
+        new file:   Semana 1/react/src/Components/Footer.js
+        new file:   Semana 1/react/src/Components/Header.js
+        modified:   Semana 1/react/src/index.js
+        deleted:    Semana 1/react/src/soma.js
+        new file:   Semana 1/react/src/time.js
+        modified:   Semana 1/react/webpack.config.js
+        modified:   Semana 1/react/yarn.lock
 
 ---
 

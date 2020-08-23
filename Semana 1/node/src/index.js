@@ -1,7 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const { uuid, isUuid } = require("uuidv4"); // Inportando apenas a fucao uuid da biblioteca uuidv4, ela tem como funcao criar um id unico universal
 
 const app = express();
+app.use(cors()); // Sem uma configuracao especifica, qualquer frontend podera acessar
 
 app.use(express.json()); // necessario para que as rotas utilizem json
 /**
@@ -43,22 +45,22 @@ function logRequests(request, response, next) {
   const loglabel = `[${method.toUpperCase()} ${url}]`;
   console.time(loglabel);
 
-   next(); // deve ser chamada para que a rota seguinte aconteça
+  next(); // deve ser chamada para que a rota seguinte aconteça
 
-  console.timeEnd(loglabel)
+  console.timeEnd(loglabel);
 }
 
-function validateProjectId(request,response,next){
-    const {id} = request.params;
-    if(!isUuid(id)){
-        return response.status(400).json({error: "Invalid ID!"})
-    }
-    return next()
+function validateProjectId(request, response, next) {
+  const { id } = request.params;
+  if (!isUuid(id)) {
+    return response.status(400).json({ error: "Invalid ID!" });
+  }
+  return next();
 }
 
 app.use(logRequests); // definindo que o middleware deverá ser utilizado para todas as rotas, deve ser incluido antes das rotas
 
-app.use("/projects/:id",validateProjectId) // Dessa forma nao sera necessario colocar em cada rota, pois criamos um padrao de rota que esse middle devera ser aplicado
+app.use("/projects/:id", validateProjectId); // Dessa forma nao sera necessario colocar em cada rota, pois criamos um padrao de rota que esse middle devera ser aplicado
 
 app.get("/", (request, response) => {
   return response.send("Rota raiz"); // Retorna apenas um texto
@@ -67,19 +69,17 @@ app.get("/", (request, response) => {
 app.get("/projects", (request, response) => {
   const { title, owner } = request.query; // Como utilizar os parametros da querystring
 
+  let results = [];
 
-  let results = []
-
-   results.push(title
-    ? projects.filter((project) => project.title.includes(title)) 
-    :null );
-    
-    results.push(
-        owner ? projects.filter((project) => project.owner === owner) : null
+  results.push(
+    title ? projects.filter((project) => project.title.includes(title)) : null
   );
-  
- //if (results && results.length > 0) return response.json(results);
 
+  results.push(
+    owner ? projects.filter((project) => project.owner === owner) : null
+  );
+
+  //if (results && results.length > 0) return response.json(results);
 
   return response.json(projects);
 }); // Definindo a rota projects
