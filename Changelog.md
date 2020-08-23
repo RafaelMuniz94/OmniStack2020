@@ -1,3 +1,77 @@
+# [0.0.7] - 23/08/2020
+## React Native Project Creation
+## RN Component use
+## RN integration with node API
+## RN IOS APP
+
+**Changed File**
+
+        modified:   Changelog.md
+        new file:   Semana 1/reactNative/.buckconfig
+        new file:   Semana 1/reactNative/.flowconfig
+        new file:   Semana 1/reactNative/.gitattributes
+        new file:   Semana 1/reactNative/.gitignore
+        new file:   Semana 1/reactNative/.watchmanconfig
+        new file:   Semana 1/reactNative/App.js
+        new file:   Semana 1/reactNative/__tests__/App-test.js
+        new file:   Semana 1/reactNative/android/app/BUCK
+        new file:   Semana 1/reactNative/android/app/build.gradle
+        new file:   Semana 1/reactNative/android/app/build_defs.bzl
+        new file:   Semana 1/reactNative/android/app/debug.keystore
+        new file:   Semana 1/reactNative/android/app/proguard-rules.pro
+        new file:   Semana 1/reactNative/android/app/src/debug/AndroidManifest.xml
+        new file:   Semana 1/reactNative/android/app/src/debug/java/com/reactnative/ReactNativeFlipper.java
+        new file:   Semana 1/reactNative/android/app/src/main/AndroidManifest.xml
+        new file:   Semana 1/reactNative/android/app/src/main/java/com/reactnative/MainActivity.java
+        new file:   Semana 1/reactNative/android/app/src/main/java/com/reactnative/MainApplication.java
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+        new file:   Semana 1/reactNative/android/app/src/main/res/values/strings.xml
+        new file:   Semana 1/reactNative/android/app/src/main/res/values/styles.xml
+        new file:   Semana 1/reactNative/android/build.gradle
+        new file:   Semana 1/reactNative/android/gradle.properties
+        new file:   Semana 1/reactNative/android/gradle/wrapper/gradle-wrapper.jar
+        new file:   Semana 1/reactNative/android/gradle/wrapper/gradle-wrapper.properties
+        new file:   Semana 1/reactNative/android/gradlew
+        new file:   Semana 1/reactNative/android/gradlew.bat
+        new file:   Semana 1/reactNative/android/settings.gradle
+        new file:   Semana 1/reactNative/app.json
+        new file:   Semana 1/reactNative/babel.config.js
+        new file:   Semana 1/reactNative/index.js
+        new file:   Semana 1/reactNative/ios/Podfile
+        new file:   Semana 1/reactNative/ios/Podfile.lock
+        new file:   Semana 1/reactNative/ios/reactNative-tvOS/Info.plist
+        new file:   Semana 1/reactNative/ios/reactNative-tvOSTests/Info.plist
+        new file:   Semana 1/reactNative/ios/reactNative.xcodeproj/project.pbxproj
+        new file:   Semana 1/reactNative/ios/reactNative.xcodeproj/xcshareddata/xcschemes/reactNative-tvOS.xcscheme
+        new file:   Semana 1/reactNative/ios/reactNative.xcodeproj/xcshareddata/xcschemes/reactNative.xcscheme
+        new file:   Semana 1/reactNative/ios/reactNative.xcworkspace/contents.xcworkspacedata
+        new file:   Semana 1/reactNative/ios/reactNative/AppDelegate.h
+        new file:   Semana 1/reactNative/ios/reactNative/AppDelegate.m
+        new file:   Semana 1/reactNative/ios/reactNative/Images.xcassets/AppIcon.appiconset/Contents.json
+        new file:   Semana 1/reactNative/ios/reactNative/Images.xcassets/Contents.json
+        new file:   Semana 1/reactNative/ios/reactNative/Info.plist
+        new file:   Semana 1/reactNative/ios/reactNative/LaunchScreen.storyboard
+        new file:   Semana 1/reactNative/ios/reactNative/main.m
+        new file:   Semana 1/reactNative/ios/reactNativeTests/Info.plist
+        new file:   Semana 1/reactNative/ios/reactNativeTests/reactNativeTests.m
+        new file:   Semana 1/reactNative/metro.config.js
+        new file:   Semana 1/reactNative/package.json
+        new file:   Semana 1/reactNative/src/index.js
+        new file:   Semana 1/reactNative/src/services/api.js
+        new file:   Semana 1/reactNative/yarn.lock
+
+---
+
+
 # [0.0.6] - 23/08/2020
 ## Front-End and Back-End integration
 ## Back-End add Cors
