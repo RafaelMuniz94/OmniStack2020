@@ -1,3 +1,15 @@
+# [0.0.5] - 22/08/2020
+## React components
+## Webpack
+## Loaders (CSS,babel,Image)
+## State, Immutability and Properties
+
+**Changed File**
+
+
+
+---
+
 # [0.0.4] - 22/08/2020
 ## Semana 1 folder inprovement
 ## React project creation
