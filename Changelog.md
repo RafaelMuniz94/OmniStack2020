@@ -3,6 +3,16 @@
 ## Types 
 ## Interfaces 
 
+**Changed File**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        new file:   Semana 1/typescript/package.json
+        new file:   Semana 1/typescript/src/index.ts
+        new file:   Semana 1/typescript/src/route.ts
+        new file:   Semana 1/typescript/src/services/CreateUser.ts
+        new file:   Semana 1/typescript/tsconfig.json
+        new file:   Semana 1/typescript/yarn.lock
 
 ---
 
