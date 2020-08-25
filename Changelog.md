@@ -1,3 +1,11 @@
+# [0.0.8] - 24/08/2020
+## Typescript project creation
+## Types 
+## Interfaces 
+
+
+---
+
 # [0.0.7] - 23/08/2020
 ## React Native Project Creation
 ## RN Component use
