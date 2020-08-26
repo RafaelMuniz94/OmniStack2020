@@ -1,3 +1,24 @@
+# [0.0.9] - 26/08/2020
+## Repository Pattern
+## Class Creation
+## Router and Routes
+## Log Middlware
+
+**Changed File**
+
+        modified:   .gitignore
+        new file:   Desafios/Semana1.md
+        new file:   Semana 2/node/package.json
+        new file:   Semana 2/node/src/model/Appointments.ts
+        new file:   Semana 2/node/src/repositories/AppointmentsRepository.ts
+        new file:   Semana 2/node/src/routes/appointments.routes.ts
+        new file:   Semana 2/node/src/routes/index.ts
+        new file:   Semana 2/node/src/server.ts
+        new file:   Semana 2/node/tsconfig.json
+        new file:   Semana 2/node/yarn.lock
+
+---
+
 # [0.0.8] - 24/08/2020
 ## Typescript project creation
 ## Types 
