@@ -1,3 +1,9 @@
+# [0.0.10] - 26/08/2020
+## DTO 
+## Omit
+
+---
+
 # [0.0.9] - 26/08/2020
 ## Repository Pattern
 ## Class Creation

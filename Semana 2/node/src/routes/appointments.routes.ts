@@ -1,17 +1,17 @@
 import { Router } from "express";
 import { getParsedHour } from "../model/Appointments";
 
-import AppointmentsRepository from '../repositories/AppointmentsRepository'
+import AppointmentsRepository from "../repositories/AppointmentsRepository";
 
 const appoinmentRouter = Router();
 
-let appointmentsRepository = new AppointmentsRepository()
+let appointmentsRepository = new AppointmentsRepository();
 
 appoinmentRouter.post("/", (request, response) => {
   let { provider, date } = request.body;
 
   let parsedDate = getParsedHour(date);
-  let findAppointmentInSameDate = appointmentsRepository.findByDate(parsedDate)
+  let findAppointmentInSameDate = appointmentsRepository.findByDate(parsedDate);
 
   if (findAppointmentInSameDate) {
     return response
@@ -19,15 +19,16 @@ appoinmentRouter.post("/", (request, response) => {
       .json({ message: "This appointment is already booked!" });
   }
 
-
-  let appointment = appointmentsRepository.create(provider,parsedDate)
-  
+  let appointment = appointmentsRepository.create({
+    provider,
+    date: parsedDate,
+  });
 
   return response.json(appointment);
 });
 
 appoinmentRouter.get("/", (request, response) => {
-  let appointments = appointmentsRepository.returnAll()
+  let appointments = appointmentsRepository.all();
   return response.json(appointments);
 });
 
