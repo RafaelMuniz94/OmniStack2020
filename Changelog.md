@@ -1,6 +1,29 @@
+# [0.0.11] - 27/08/2020
+## SOLID
+## Service
+## Dependency Inversion
+
+**Changed File**
+
+        modified:   Changelog.md
+        modified:   Semana 2/node/src/model/Appointments.ts
+        modified:   Semana 2/node/src/repositories/AppointmentsRepository.ts
+        modified:   Semana 2/node/src/routes/appointments.routes.ts
+        modified:   Semana 2/node/src/routes/index.ts
+        new file:   Semana 2/node/src/services/CreateAppointmentService.ts
+        
+---
+
 # [0.0.10] - 26/08/2020
 ## DTO 
 ## Omit
+
+**Changed File**
+
+        modified:   Changelog.md
+        modified:   Semana 2/node/src/model/Appointments.ts
+        modified:   Semana 2/node/src/repositories/AppointmentsRepository.ts
+        modified:   Semana 2/node/src/routes/appointments.routes.ts
 
 ---
 

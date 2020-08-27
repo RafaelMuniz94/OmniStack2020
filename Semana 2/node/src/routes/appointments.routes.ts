@@ -1,30 +1,25 @@
 import { Router } from "express";
-import { getParsedHour } from "../model/Appointments";
-
 import AppointmentsRepository from "../repositories/AppointmentsRepository";
+import { getParsedHour } from "../model/Appointments";
+import CreateAppointmentService from "../services/CreateAppointmentService";
 
 const appoinmentRouter = Router();
 
 let appointmentsRepository = new AppointmentsRepository();
 
 appoinmentRouter.post("/", (request, response) => {
-  let { provider, date } = request.body;
+  try {
+    let { provider, date } = request.body;
 
-  let parsedDate = getParsedHour(date);
-  let findAppointmentInSameDate = appointmentsRepository.findByDate(parsedDate);
+    let parsedDate = getParsedHour(date);
+    let createService = new CreateAppointmentService(appointmentsRepository);
 
-  if (findAppointmentInSameDate) {
-    return response
-      .status(400)
-      .json({ message: "This appointment is already booked!" });
+    let appointment = createService.execute({ parsedDate, provider });
+
+    return response.json(appointment);
+  } catch (error) {
+    return response.status(400).json({ error: error.message });
   }
-
-  let appointment = appointmentsRepository.create({
-    provider,
-    date: parsedDate,
-  });
-
-  return response.json(appointment);
 });
 
 appoinmentRouter.get("/", (request, response) => {

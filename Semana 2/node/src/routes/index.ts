@@ -3,6 +3,7 @@ import appointmentsRouter from './appointments.routes'
 
 const routes = Router();
 
+// As rotas devem ser responsaveis por receber a requisicao, chamar outro arquivo e devolver uma resposta, todo o resto devera ficar em seus respectivos componentes
 
 function LogRoutes(request: Request,response:Response,next: NextFunction) {
     let log = `[${request.method}] - ${request.url}`

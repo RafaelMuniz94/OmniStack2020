@@ -1,6 +1,7 @@
 import Appointments from "../model/Appointments";
 import { isEqual } from "date-fns";
 
+// O repository é responsavel pela comunicacao da aplicacao com o seu componente de pesrsistencia
 
 interface CreateAppointmentDTO{
     provider: string,
@@ -18,7 +19,7 @@ class AppointmentsRepository {
   public create(data: CreateAppointmentDTO): Appointments {
 
     let {provider, date} = data
-    let appointment = new Appointments(provider, date);
+    let appointment = new Appointments({provider, date});
     this.appointments.push(appointment);
 
     return appointment;

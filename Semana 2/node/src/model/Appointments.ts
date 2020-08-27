@@ -1,6 +1,7 @@
 import {startOfHour,parseISO} from 'date-fns'
 import { uuid } from "UuidV4";
 
+// A model é responsavel pela estrutura do dado que a aplicacao utiliza
 
 class  Appointments {
   id: string;
