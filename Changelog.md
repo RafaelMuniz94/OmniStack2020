@@ -1,9 +1,20 @@
+# [0.0.12] - 30/08/2020
+## Changelog typo correction
+## Add typeorm
+## Add typeorm config
+## Create Initial Migration
+
+**Changed Files**
+
+
+---
+
 # [0.0.11] - 27/08/2020
 ## SOLID
 ## Service
 ## Dependency Inversion
 
-**Changed File**
+**Changed Files**
 
         modified:   Changelog.md
         modified:   Semana 2/node/src/model/Appointments.ts
@@ -18,7 +29,7 @@
 ## DTO 
 ## Omit
 
-**Changed File**
+**Changed Files**
 
         modified:   Changelog.md
         modified:   Semana 2/node/src/model/Appointments.ts
@@ -33,7 +44,7 @@
 ## Router and Routes
 ## Log Middlware
 
-**Changed File**
+**Changed Files**
 
         modified:   .gitignore
         new file:   Desafios/Semana1.md
@@ -53,7 +64,7 @@
 ## Types 
 ## Interfaces 
 
-**Changed File**
+**Changed Files**
 
         modified:   .gitignore
         modified:   Changelog.md
@@ -72,7 +83,7 @@
 ## RN integration with node API
 ## RN IOS APP
 
-**Changed File**
+**Changed Files**
 
         modified:   Changelog.md
         new file:   Semana 1/reactNative/.buckconfig
@@ -145,7 +156,7 @@
 ## Back-End add Cors
 ## Babel plugin to work with async/await
 
-**Changed File**
+**Changed Files**
 
         modified:   Changelog.md
         modified:   Semana 1/node/package.json
@@ -167,7 +178,7 @@
 ## Loaders (CSS,babel,Image)
 ## State, Immutability and Properties
 
-**Changed File**
+**Changed Files**
 
         modified:   .gitignore
         modified:   Changelog.md
@@ -194,7 +205,7 @@
 ## Webpack configuration
 ## Babel configuration
 
-**Changed File**
+**Changed Files**
 
         modified:   Changelog.md
         renamed:    Semana 1/package.json -> Semana 1/node/package.json
@@ -218,7 +229,7 @@
 ## Inclusion of Uuid dependecy
 
 
-**Changed File**
+**Changed Files**
 
         modified:   Changelog.md
         modified:   Semana 1/package.json
@@ -231,7 +242,7 @@
 ## Concepts about NODE JS, REST API, HTTP verbs and Params
 ## Creation of express app and routes
 
-**Changed File**
+**Changed Files**
 
         modified:   .gitignore
         modified:   Changelog.md
@@ -248,7 +259,7 @@
 ## Folder Structure defined
 
 
-**Changed File**
+**Changed Files**
 
        new file:   .gitignore
        new file:   Changelog.md
