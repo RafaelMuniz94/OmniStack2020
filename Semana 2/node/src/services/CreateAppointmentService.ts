@@ -1,4 +1,5 @@
 import Appointments from "../model/Appointments";
+import {getCustomRepository} from 'typeorm'
 import AppointmentsRepository from "../repositories/AppointmentsRepository";
 
 interface RequestDTO {
@@ -7,19 +8,20 @@ interface RequestDTO {
 }
 
 class CreateAppointmentService {
-  private appointmentsRepository: AppointmentsRepository;
+  // private appointmentsRepository: AppointmentsRepository;
 
-  constructor(repo: AppointmentsRepository) {
-    /**
-     * Dependecy Inversion (SOLID)
-     * Sempre que houver uma dependencia externa, ao inves de instanciar ela novamente nos receberemos ela como parametro no constructor
-     */
+  // constructor(repo: AppointmentsRepository) {
+  //   /**
+  //    * Dependecy Inversion (SOLID)
+  //    * Sempre que houver uma dependencia externa, ao inves de instanciar ela novamente nos receberemos ela como parametro no constructor
+  //    */
 
-    this.appointmentsRepository = repo;
-  }
+  //   this.appointmentsRepository = repo;
+  // }
 
-  public execute({ parsedDate, provider }: RequestDTO): Appointments {
-    let findAppointmentInSameDate = this.appointmentsRepository.findByDate(
+  public async execute({ parsedDate, provider }: RequestDTO): Promise<Appointments> {
+    const appointmentsRepository = getCustomRepository(AppointmentsRepository)
+    let findAppointmentInSameDate = await appointmentsRepository.findByDate(
       parsedDate
     );
 
@@ -27,10 +29,12 @@ class CreateAppointmentService {
       throw Error("This appointment is already booked!");
     }
 
-    let appointment = this.appointmentsRepository.create({
+    let appointment = appointmentsRepository.create({
       provider,
       date: parsedDate,
-    });
+    }); // Cria porem nao salva no banco de dados
+
+    await appointmentsRepository.save(appointment) // salva no banco de dados
 
     return appointment;
   } // Esse metodo deve ser unico no service

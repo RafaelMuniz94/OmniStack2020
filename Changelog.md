@@ -1,3 +1,23 @@
+# [0.0.13] - 30/08/2020
+## Inclusion of Entities metadata at ormconfig
+## Inclusion of reflect-metadata to create metadata
+## Async functions calls fix
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana 2/node/ormconfig.json
+        modified:   Semana 2/node/package.json
+        modified:   Semana 2/node/src/database/migrations/1598819008070-CreateAppointments.ts
+        modified:   Semana 2/node/src/model/Appointments.ts
+        modified:   Semana 2/node/src/repositories/AppointmentsRepository.ts
+        modified:   Semana 2/node/src/routes/appointments.routes.ts
+        modified:   Semana 2/node/src/server.ts
+        modified:   Semana 2/node/src/services/CreateAppointmentService.ts
+        modified:   Semana 2/node/tsconfig.json
+
+---
+
 # [0.0.12] - 30/08/2020
 ## Changelog typo correction
 ## Add typeorm
@@ -6,6 +26,13 @@
 
 **Changed Files**
 
+        modified:   Changelog.md
+        new file:   Semana 2/node/ormconfig.json
+        modified:   Semana 2/node/package.json
+        new file:   Semana 2/node/src/database/index.ts
+        new file:   Semana 2/node/src/database/migrations/1598819008070-CreateAppointments.ts
+        modified:   Semana 2/node/src/server.ts
+        modified:   Semana 2/node/yarn.lock
 
 ---
 

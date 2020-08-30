@@ -1,38 +1,51 @@
 import Appointments from "../model/Appointments";
-import { isEqual } from "date-fns";
+import { EntityRepository, Repository } from "typeorm";
 
 // O repository é responsavel pela comunicacao da aplicacao com o seu componente de pesrsistencia
 
-interface CreateAppointmentDTO{
-    provider: string,
-    date: Date
-}
+// interface CreateAppointmentDTO{
+//     provider: string,
+//     date: Date
+// } Nao necessario com Typeorm
 
+@EntityRepository(Appointments)
+class AppointmentsRepository extends Repository<Appointments> {
+  // private appointments: Appointments[];
 
-class AppointmentsRepository {
-  private appointments: Appointments[];
+  // constructor() {
+  //   this.appointments = [];
+  // }
 
-  constructor() {
-    this.appointments = [];
-  }
+  // public create(data: CreateAppointmentDTO): Appointments {
 
-  public create(data: CreateAppointmentDTO): Appointments {
+  //   let {provider, date} = data
+  //   let appointment = new Appointments({provider, date});
+  //   this.appointments.push(appointment);
 
-    let {provider, date} = data
-    let appointment = new Appointments({provider, date});
-    this.appointments.push(appointment);
+  //   return appointment;
+  // }
 
-    return appointment;
-  }
+  // public all(): Appointments[]{
+  //     return this.appointments
+  // }
 
-  public findByDate(parsedDate: Date): Appointments | null {
-    return this.appointments.find((appoinment) =>
-      isEqual(parsedDate, appoinment.date)
-    ) || null;
-  }
+  /**
+   *
+   * Com a utilizacao do typeorm nao é necessario utilizar os metodos para criar e buscar todos os elementos e tambem nao é necessario o array
+   */
 
-  public all(): Appointments[]{
-      return this.appointments
+  public async findByDate(parsedDate: Date): Promise<Appointments | null> {
+    // return this.appointments.find((appoinment) =>
+    //   isEqual(parsedDate, appoinment.date)
+    // ) || null;
+
+    let findAppointments = await this.findOne({
+      where: {
+        date: parsedDate,
+      },
+    });
+
+    return findAppointments || null;
   }
 }
 

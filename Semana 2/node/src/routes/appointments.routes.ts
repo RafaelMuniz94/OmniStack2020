@@ -1,20 +1,21 @@
 import { Router } from "express";
+import { getCustomRepository } from "typeorm";
 import AppointmentsRepository from "../repositories/AppointmentsRepository";
 import { getParsedHour } from "../model/Appointments";
 import CreateAppointmentService from "../services/CreateAppointmentService";
 
 const appoinmentRouter = Router();
 
-let appointmentsRepository = new AppointmentsRepository();
+//let appointmentsRepository = new AppointmentsRepository();
 
-appoinmentRouter.post("/", (request, response) => {
+appoinmentRouter.post("/", async (request, response) => {
   try {
     let { provider, date } = request.body;
 
     let parsedDate = getParsedHour(date);
-    let createService = new CreateAppointmentService(appointmentsRepository);
+    let createService = new CreateAppointmentService();
 
-    let appointment = createService.execute({ parsedDate, provider });
+    let appointment = await createService.execute({ parsedDate, provider });
 
     return response.json(appointment);
   } catch (error) {
@@ -22,8 +23,10 @@ appoinmentRouter.post("/", (request, response) => {
   }
 });
 
-appoinmentRouter.get("/", (request, response) => {
-  let appointments = appointmentsRepository.all();
+appoinmentRouter.get("/", async (request, response) => {
+  let appointmentsRepository = getCustomRepository(AppointmentsRepository);
+
+  let appointments = await appointmentsRepository.find();
   return response.json(appointments);
 });
 
