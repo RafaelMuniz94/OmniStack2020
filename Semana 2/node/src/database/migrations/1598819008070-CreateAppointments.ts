@@ -12,10 +12,10 @@ export class CreateAppointments1598819008070 implements MigrationInterface {
         columns: [
           {
             name: "id",
-            type: "varchar", // Uuid - String
+            type: "uuid", // Uuid - String
             isPrimary: true, // primary key
             generationStrategy: "uuid", // primary key
-            default: 'uuid_generate_v4()'
+            default: "uuid_generate_v4()",
           },
           {
             name: "provider",
@@ -26,6 +26,16 @@ export class CreateAppointments1598819008070 implements MigrationInterface {
             name: "date",
             type: "timestamp with time zone", // esse tipo so existe para o postgres, caso utilizar outro banco, deve ser do tipo timestamp
             isNullable: false,
+          },
+          {
+            name: "created_at",
+            type: "timestamp",
+            default: "now()",
+          },
+          {
+            name: "updated_at",
+            type: "timestamp",
+            default: "now()",
           },
         ],
       })
@@ -38,6 +48,6 @@ export class CreateAppointments1598819008070 implements MigrationInterface {
      * Desfaz o metodo up
      * Alteracoes, criacao de tabelas
      */
-    await queryRunner.dropTable('appointments')
+    await queryRunner.dropTable("appointments");
   }
 }

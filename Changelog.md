@@ -1,3 +1,19 @@
+# [0.0.14] - 31/08/2020
+## Change Provider to Provider_ID
+## Create User Model and Migration
+## Create Many to One Relationship between Appointment and User
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana 2/node/src/database/migrations/1598819008070-CreateAppointments.ts
+        new file:   Semana 2/node/src/database/migrations/1598917118367-Users.ts
+        new file:   Semana 2/node/src/database/migrations/1598920821694-AlterProvidertoProviderID.ts
+        modified:   Semana 2/node/src/model/Appointments.ts
+        new file:   Semana 2/node/src/model/Users.ts
+
+---
+
 # [0.0.13] - 30/08/2020
 ## Inclusion of Entities metadata at ormconfig
 ## Inclusion of reflect-metadata to create metadata
