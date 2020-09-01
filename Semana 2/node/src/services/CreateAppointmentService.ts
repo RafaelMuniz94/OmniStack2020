@@ -3,7 +3,7 @@ import {getCustomRepository} from 'typeorm'
 import AppointmentsRepository from "../repositories/AppointmentsRepository";
 
 interface RequestDTO {
-  provider: string;
+  provider_id: string;
   parsedDate: Date;
 }
 
@@ -19,7 +19,7 @@ class CreateAppointmentService {
   //   this.appointmentsRepository = repo;
   // }
 
-  public async execute({ parsedDate, provider }: RequestDTO): Promise<Appointments> {
+  public async execute({ parsedDate, provider_id }: RequestDTO): Promise<Appointments> {
     const appointmentsRepository = getCustomRepository(AppointmentsRepository)
     let findAppointmentInSameDate = await appointmentsRepository.findByDate(
       parsedDate
@@ -30,7 +30,7 @@ class CreateAppointmentService {
     }
 
     let appointment = appointmentsRepository.create({
-      provider,
+      provider_id,
       date: parsedDate,
     }); // Cria porem nao salva no banco de dados
 

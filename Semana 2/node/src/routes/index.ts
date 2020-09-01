@@ -1,5 +1,6 @@
 import {Router,Request,Response,NextFunction, json} from 'express'
 import appointmentsRouter from './appointments.routes'
+import usersRouter from './users.routes'
 
 const routes = Router();
 
@@ -13,4 +14,5 @@ function LogRoutes(request: Request,response:Response,next: NextFunction) {
 routes.use(LogRoutes)
 routes.use(json())
 routes.use('/appointments',appointmentsRouter) // Repassa qualquer rota http que ira passar pelo caminho /appointments para o router de appointments
+routes.use('/users',usersRouter) // Repassa qualquer rota http que ira passar pelo caminho /users para o router de users
 export default routes

@@ -10,12 +10,12 @@ const appoinmentRouter = Router();
 
 appoinmentRouter.post("/", async (request, response) => {
   try {
-    let { provider, date } = request.body;
+    let { provider_id, date } = request.body;
 
     let parsedDate = getParsedHour(date);
     let createService = new CreateAppointmentService();
 
-    let appointment = await createService.execute({ parsedDate, provider });
+    let appointment = await createService.execute({ parsedDate, provider_id });
 
     return response.json(appointment);
   } catch (error) {

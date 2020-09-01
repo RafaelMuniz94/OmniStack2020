@@ -1,3 +1,22 @@
+# [0.0.15] - 31/08/2020
+## Add bcrypitJS dependency
+## Create Hash password
+## Fix Appointment Creation route
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana 2/node/package.json
+        modified:   Semana 2/node/src/routes/appointments.routes.ts
+        modified:   Semana 2/node/src/routes/index.ts
+        new file:   Semana 2/node/src/routes/users.routes.ts
+        modified:   Semana 2/node/src/services/CreateAppointmentService.ts
+        new file:   Semana 2/node/src/services/CreateUserService.ts
+        new file:   Semana 2/node/yarn-error.log
+        modified:   Semana 2/node/yarn.lock
+
+---
+
 # [0.0.14] - 31/08/2020
 ## Change Provider to Provider_ID
 ## Create User Model and Migration
