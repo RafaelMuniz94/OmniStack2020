@@ -3,3 +3,4 @@ bundle.js
 build/
 dist/
 .vscode/
+config/

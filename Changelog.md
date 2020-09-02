@@ -1,3 +1,26 @@
+# [0.0.16] - 01/09/2020
+## JWT Token
+## Authorization Service
+## Type Express overwrite
+## Session Route
+## Authorization Middleware
+## Authorization Middleware included in Appointments route
+
+**Changed Files**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        modified:   Semana 2/node/package.json
+        new file:   Semana 2/node/src/@types/express.d.ts
+        new file:   Semana 2/node/src/middlewares/ensureAuthenticated.ts
+        modified:   Semana 2/node/src/routes/appointments.routes.ts
+        modified:   Semana 2/node/src/routes/index.ts
+        new file:   Semana 2/node/src/routes/sessions.routes.ts
+        new file:   Semana 2/node/src/services/AuthenticateUserService.ts
+        modified:   Semana 2/node/yarn.lock
+
+---
+
 # [0.0.15] - 31/08/2020
 ## Add bcrypitJS dependency
 ## Create Hash password
