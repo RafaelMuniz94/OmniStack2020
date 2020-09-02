@@ -23,11 +23,15 @@ class Users {
   @Column()
   password: string;
 
+  @Column()
+  avatar: string;
+
   @CreateDateColumn()
   created_at: Date;
 
   @UpdateDateColumn()
   updated_at: Date;
+
 }
 
 export default Users;

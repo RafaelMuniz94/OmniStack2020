@@ -1,3 +1,128 @@
+# [0.0.17] - 02/09/2020
+## File Upload
+## Multer Config
+## TMP folder to add image to local storage
+## Folder structure rename
+
+**Changed Files**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        deleted:    Semana 2/node/src/routes/users.routes.ts
+        renamed:    Semana 1/node/package.json -> Semana_1/node/package.json
+        renamed:    Semana 1/node/src/index.js -> Semana_1/node/src/index.js
+        renamed:    Semana 1/node/yarn.lock -> Semana_1/node/yarn.lock
+        renamed:    Semana 1/react/babel.config.js -> Semana_1/react/babel.config.js
+        renamed:    Semana 1/react/package.json -> Semana_1/react/package.json
+        renamed:    Semana 1/react/public/index.html -> Semana_1/react/public/index.html
+        renamed:    Semana 1/react/public/script.js -> Semana_1/react/public/script.js
+        renamed:    Semana 1/react/src/App.js -> Semana_1/react/src/App.js
+        renamed:    Semana 1/react/src/Assets/background.png -> Semana_1/react/src/Assets/background.png
+        renamed:    Semana 1/react/src/CSS/App.css -> Semana_1/react/src/CSS/App.css
+        renamed:    Semana 1/react/src/Components/Body.js -> Semana_1/react/src/Components/Body.js
+        renamed:    Semana 1/react/src/Components/Footer.js -> Semana_1/react/src/Components/Footer.js
+        renamed:    Semana 1/react/src/Components/Header.js -> Semana_1/react/src/Components/Header.js
+        renamed:    Semana 1/react/src/index.js -> Semana_1/react/src/index.js
+        renamed:    Semana 1/react/src/services/api.js -> Semana_1/react/src/services/api.js
+        renamed:    Semana 1/react/src/time.js -> Semana_1/react/src/time.js
+        renamed:    Semana 1/react/webpack.config.js -> Semana_1/react/webpack.config.js
+        renamed:    Semana 1/react/yarn-error.log -> Semana_1/react/yarn-error.log
+        renamed:    Semana 1/react/yarn.lock -> Semana_1/react/yarn.lock
+        renamed:    Semana 1/reactNative/.buckconfig -> Semana_1/reactNative/.buckconfig
+        renamed:    Semana 1/reactNative/.flowconfig -> Semana_1/reactNative/.flowconfig
+        renamed:    Semana 1/reactNative/.gitattributes -> Semana_1/reactNative/.gitattributes
+        renamed:    Semana 1/reactNative/.gitignore -> Semana_1/reactNative/.gitignore
+        renamed:    Semana 1/reactNative/.watchmanconfig -> Semana_1/reactNative/.watchmanconfig
+        renamed:    Semana 1/reactNative/App.js -> Semana_1/reactNative/App.js
+        renamed:    Semana 1/reactNative/__tests__/App-test.js -> Semana_1/reactNative/__tests__/App-test.js
+        renamed:    Semana 1/reactNative/android/app/BUCK -> Semana_1/reactNative/android/app/BUCK
+        renamed:    Semana 1/reactNative/android/app/build.gradle -> Semana_1/reactNative/android/app/build.gradle
+        renamed:    Semana 1/reactNative/android/app/build_defs.bzl -> Semana_1/reactNative/android/app/build_defs.bzl
+        renamed:    Semana 1/reactNative/android/app/debug.keystore -> Semana_1/reactNative/android/app/debug.keystore
+        renamed:    Semana 1/reactNative/android/app/proguard-rules.pro -> Semana_1/reactNative/android/app/proguard-rules.pro
+        renamed:    Semana 1/reactNative/android/app/src/debug/AndroidManifest.xml -> Semana_1/reactNative/android/app/src/debug/AndroidManifest.xml
+        renamed:    Semana 1/reactNative/android/app/src/debug/java/com/reactnative/ReactNativeFlipper.java -> Semana_1/reactNative/android/app/src/debug/java/com/reactnative/ReactNativeFlipper.java
+        renamed:    Semana 1/reactNative/android/app/src/main/AndroidManifest.xml -> Semana_1/reactNative/android/app/src/main/AndroidManifest.xml
+        renamed:    Semana 1/reactNative/android/app/src/main/java/com/reactnative/MainActivity.java -> Semana_1/reactNative/android/app/src/main/java/com/reactnative/MainActivity.java
+        renamed:    Semana 1/reactNative/android/app/src/main/java/com/reactnative/MainApplication.java -> Semana_1/reactNative/android/app/src/main/java/com/reactnative/MainApplication.java
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-hdpi/ic_launcher.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-mdpi/ic_launcher.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png -> Semana_1/reactNative/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+        renamed:    Semana 1/reactNative/android/app/src/main/res/values/strings.xml -> Semana_1/reactNative/android/app/src/main/res/values/strings.xml
+        renamed:    Semana 1/reactNative/android/app/src/main/res/values/styles.xml -> Semana_1/reactNative/android/app/src/main/res/values/styles.xml
+        renamed:    Semana 1/reactNative/android/build.gradle -> Semana_1/reactNative/android/build.gradle
+        renamed:    Semana 1/reactNative/android/gradle.properties -> Semana_1/reactNative/android/gradle.properties
+        renamed:    Semana 1/reactNative/android/gradle/wrapper/gradle-wrapper.jar -> Semana_1/reactNative/android/gradle/wrapper/gradle-wrapper.jar
+        renamed:    Semana 1/reactNative/android/gradle/wrapper/gradle-wrapper.properties -> Semana_1/reactNative/android/gradle/wrapper/gradle-wrapper.properties
+        renamed:    Semana 1/reactNative/android/gradlew -> Semana_1/reactNative/android/gradlew
+        renamed:    Semana 1/reactNative/android/gradlew.bat -> Semana_1/reactNative/android/gradlew.bat
+        renamed:    Semana 1/reactNative/android/settings.gradle -> Semana_1/reactNative/android/settings.gradle
+        renamed:    Semana 1/reactNative/app.json -> Semana_1/reactNative/app.json
+        renamed:    Semana 1/reactNative/babel.config.js -> Semana_1/reactNative/babel.config.js
+        renamed:    Semana 1/reactNative/index.js -> Semana_1/reactNative/index.js
+        renamed:    Semana 1/reactNative/ios/Podfile -> Semana_1/reactNative/ios/Podfile
+        renamed:    Semana 1/reactNative/ios/Podfile.lock -> Semana_1/reactNative/ios/Podfile.lock
+        renamed:    Semana 1/reactNative/ios/reactNative-tvOS/Info.plist -> Semana_1/reactNative/ios/reactNative-tvOS/Info.plist
+        renamed:    Semana 1/reactNative/ios/reactNative-tvOSTests/Info.plist -> Semana_1/reactNative/ios/reactNative-tvOSTests/Info.plist
+        renamed:    Semana 1/reactNative/ios/reactNative.xcodeproj/project.pbxproj -> Semana_1/reactNative/ios/reactNative.xcodeproj/project.pbxproj
+        renamed:    Semana 1/reactNative/ios/reactNative.xcodeproj/xcshareddata/xcschemes/reactNative-tvOS.xcscheme -> Semana_1/reactNative/ios/reactNative.xcodeproj/xcshareddata/xcschemes/reactNative-tvOS.xcscheme
+        renamed:    Semana 1/reactNative/ios/reactNative.xcodeproj/xcshareddata/xcschemes/reactNative.xcscheme -> Semana_1/reactNative/ios/reactNative.xcodeproj/xcshareddata/xcschemes/reactNative.xcscheme
+        renamed:    Semana 1/reactNative/ios/reactNative.xcworkspace/contents.xcworkspacedata -> Semana_1/reactNative/ios/reactNative.xcworkspace/contents.xcworkspacedata
+        renamed:    Semana 1/reactNative/ios/reactNative/AppDelegate.h -> Semana_1/reactNative/ios/reactNative/AppDelegate.h
+        renamed:    Semana 1/reactNative/ios/reactNative/AppDelegate.m -> Semana_1/reactNative/ios/reactNative/AppDelegate.m
+        renamed:    Semana 1/reactNative/ios/reactNative/Images.xcassets/AppIcon.appiconset/Contents.json -> Semana_1/reactNative/ios/reactNative/Images.xcassets/AppIcon.appiconset/Contents.json
+        renamed:    Semana 1/reactNative/ios/reactNative/Images.xcassets/Contents.json -> Semana_1/reactNative/ios/reactNative/Images.xcassets/Contents.json
+        renamed:    Semana 1/reactNative/ios/reactNative/Info.plist -> Semana_1/reactNative/ios/reactNative/Info.plist
+        renamed:    Semana 1/reactNative/ios/reactNative/LaunchScreen.storyboard -> Semana_1/reactNative/ios/reactNative/LaunchScreen.storyboard
+        renamed:    Semana 1/reactNative/ios/reactNative/main.m -> Semana_1/reactNative/ios/reactNative/main.m
+        renamed:    Semana 1/reactNative/ios/reactNativeTests/Info.plist -> Semana_1/reactNative/ios/reactNativeTests/Info.plist
+        renamed:    Semana 1/reactNative/ios/reactNativeTests/reactNativeTests.m -> Semana_1/reactNative/ios/reactNativeTests/reactNativeTests.m
+        renamed:    Semana 1/reactNative/metro.config.js -> Semana_1/reactNative/metro.config.js
+        renamed:    Semana 1/reactNative/package.json -> Semana_1/reactNative/package.json
+        renamed:    Semana 1/reactNative/src/index.js -> Semana_1/reactNative/src/index.js
+        renamed:    Semana 1/reactNative/src/services/api.js -> Semana_1/reactNative/src/services/api.js
+        renamed:    Semana 1/reactNative/yarn.lock -> Semana_1/reactNative/yarn.lock
+        renamed:    Semana 1/typescript/package.json -> Semana_1/typescript/package.json
+        renamed:    Semana 1/typescript/src/index.ts -> Semana_1/typescript/src/index.ts
+        renamed:    Semana 1/typescript/src/route.ts -> Semana_1/typescript/src/route.ts
+        renamed:    Semana 1/typescript/src/services/CreateUser.ts -> Semana_1/typescript/src/services/CreateUser.ts
+        renamed:    Semana 1/typescript/tsconfig.json -> Semana_1/typescript/tsconfig.json
+        renamed:    Semana 1/typescript/yarn.lock -> Semana_1/typescript/yarn.lock
+        renamed:    Semana 2/node/ormconfig.json -> Semana_2/node/ormconfig.json
+        renamed:    Semana 2/node/package.json -> Semana_2/node/package.json
+        renamed:    Semana 2/node/src/@types/express.d.ts -> Semana_2/node/src/@types/express.d.ts
+        renamed:    Semana 2/node/src/database/index.ts -> Semana_2/node/src/database/index.ts
+        renamed:    Semana 2/node/src/database/migrations/1598819008070-CreateAppointments.ts -> Semana_2/node/src/database/migrations/1598819008070-CreateAppointments.ts
+        renamed:    Semana 2/node/src/database/migrations/1598917118367-Users.ts -> Semana_2/node/src/database/migrations/1598917118367-Users.ts
+        renamed:    Semana 2/node/src/database/migrations/1598920821694-AlterProvidertoProviderID.ts -> Semana_2/node/src/database/migrations/1598920821694-AlterProvidertoProviderID.ts
+        new file:   Semana_2/node/src/database/migrations/1599010958145-AddAvatarFieldsToUsers.ts
+        renamed:    Semana 2/node/src/middlewares/ensureAuthenticated.ts -> Semana_2/node/src/middlewares/ensureAuthenticated.ts
+        renamed:    Semana 2/node/src/model/Appointments.ts -> Semana_2/node/src/model/Appointments.ts
+        renamed:    Semana 2/node/src/model/Users.ts -> Semana_2/node/src/model/Users.ts
+        renamed:    Semana 2/node/src/repositories/AppointmentsRepository.ts -> Semana_2/node/src/repositories/AppointmentsRepository.ts
+        renamed:    Semana 2/node/src/routes/appointments.routes.ts -> Semana_2/node/src/routes/appointments.routes.ts
+        renamed:    Semana 2/node/src/routes/index.ts -> Semana_2/node/src/routes/index.ts
+        renamed:    Semana 2/node/src/routes/sessions.routes.ts -> Semana_2/node/src/routes/sessions.routes.ts
+        new file:   Semana_2/node/src/routes/users.routes.ts
+        renamed:    Semana 2/node/src/server.ts -> Semana_2/node/src/server.ts
+        renamed:    Semana 2/node/src/services/AuthenticateUserService.ts -> Semana_2/node/src/services/AuthenticateUserService.ts
+        renamed:    Semana 2/node/src/services/CreateAppointmentService.ts -> Semana_2/node/src/services/CreateAppointmentService.ts
+        renamed:    Semana 2/node/src/services/CreateUserService.ts -> Semana_2/node/src/services/CreateUserService.ts
+        new file:   Semana_2/node/src/services/UpdateUserAvatarService.ts
+        new file:   Semana_2/node/tmp/.gitkeep
+        renamed:    Semana 2/node/tsconfig.json -> Semana_2/node/tsconfig.json
+        renamed:    Semana 2/node/yarn-error.log -> Semana_2/node/yarn-error.log
+        renamed:    Semana 2/node/yarn.lock -> Semana_2/node/yarn.lock
+
+---
+
 # [0.0.16] - 01/09/2020
 ## JWT Token
 ## Authorization Service

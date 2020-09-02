@@ -4,3 +4,6 @@ build/
 dist/
 .vscode/
 config/
+
+/tmp/**
+!/tmp/.gitkeep
