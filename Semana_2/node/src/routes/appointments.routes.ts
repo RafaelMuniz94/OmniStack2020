@@ -3,27 +3,23 @@ import { getCustomRepository } from "typeorm";
 import AppointmentsRepository from "../repositories/AppointmentsRepository";
 import { getParsedHour } from "../model/Appointments";
 import CreateAppointmentService from "../services/CreateAppointmentService";
-import ensureAuthenticated from '../middlewares/ensureAuthenticated'
+import ensureAuthenticated from "../middlewares/ensureAuthenticated";
 
 const appoinmentRouter = Router();
 
-appoinmentRouter.use(ensureAuthenticated)
+appoinmentRouter.use(ensureAuthenticated);
 
 //let appointmentsRepository = new AppointmentsRepository();
 
 appoinmentRouter.post("/", async (request, response) => {
-  try {
-    let { provider_id, date } = request.body;
+  let { provider_id, date } = request.body;
 
-    let parsedDate = getParsedHour(date);
-    let createService = new CreateAppointmentService();
+  let parsedDate = getParsedHour(date);
+  let createService = new CreateAppointmentService();
 
-    let appointment = await createService.execute({ parsedDate, provider_id });
+  let appointment = await createService.execute({ parsedDate, provider_id });
 
-    return response.json({appointment});
-  } catch (error) {
-    return response.status(400).json({ error: error.message });
-  }
+  return response.json({ appointment });
 });
 
 appoinmentRouter.get("/", async (request, response) => {

@@ -1,3 +1,28 @@
+# [0.0.18] - 03/09/2020
+## Global Exception Handler
+## Static files Route
+## Application Error
+## Router Errors Handler Remove
+
+**Changed Files**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        modified:   Semana_2/node/package.json
+        new file:   Semana_2/node/src/errors/AppError.ts
+        modified:   Semana_2/node/src/middlewares/ensureAuthenticated.ts
+        modified:   Semana_2/node/src/routes/appointments.routes.ts
+        modified:   Semana_2/node/src/routes/sessions.routes.ts
+        modified:   Semana_2/node/src/routes/users.routes.ts
+        modified:   Semana_2/node/src/server.ts
+        modified:   Semana_2/node/src/services/AuthenticateUserService.ts
+        modified:   Semana_2/node/src/services/CreateAppointmentService.ts
+        modified:   Semana_2/node/src/services/CreateUserService.ts
+        modified:   Semana_2/node/src/services/UpdateUserAvatarService.ts
+        modified:   Semana_2/node/yarn.lock
+
+---
+
 # [0.0.17] - 02/09/2020
 ## File Upload
 ## Multer Config
