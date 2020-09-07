@@ -3,6 +3,9 @@ bundle.js
 build/
 dist/
 .vscode/
-config/
-tmp/*
-!tmp/.gitkeep
+Semana_2/node/src/config/auth.ts
+
+
+
+Semana_2/node/tmp/*
+!Semana_2/node/tmp/.gitkeep

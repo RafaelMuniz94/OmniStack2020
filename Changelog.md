@@ -1,3 +1,43 @@
+# [0.0.19] - 07/09/2020
+## React Router
+## Fragment
+## Styled Components
+## Error Handling
+## React IF
+## Api access
+## Image Use
+## Font Use
+## Global Style
+
+**Changed Files**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        modified:   README.md
+        modified:   Semana_2/node/ormconfig.json
+        new file:   Semana_2/node/src/config/upload.ts
+        new file:   Semana_3/githubrepo/.gitignore
+        new file:   Semana_3/githubrepo/package.json
+        new file:   Semana_3/githubrepo/public/favicon.ico
+        new file:   Semana_3/githubrepo/public/index.html
+        new file:   Semana_3/githubrepo/public/robots.txt
+        new file:   Semana_3/githubrepo/src/App.tsx
+        new file:   Semana_3/githubrepo/src/Assets/background.svg
+        new file:   Semana_3/githubrepo/src/Assets/page_logo.svg
+        new file:   Semana_3/githubrepo/src/Services/api.ts
+        new file:   Semana_3/githubrepo/src/Styles/global.ts
+        new file:   Semana_3/githubrepo/src/index.tsx
+        new file:   Semana_3/githubrepo/src/pages/Dashboard/index.tsx
+        new file:   Semana_3/githubrepo/src/pages/Dashboard/styles.ts
+        new file:   Semana_3/githubrepo/src/pages/Repository/index.tsx
+        new file:   Semana_3/githubrepo/src/react-app-env.d.ts
+        new file:   Semana_3/githubrepo/src/routes/index.tsx
+        new file:   Semana_3/githubrepo/src/setupTests.ts
+        new file:   Semana_3/githubrepo/tsconfig.json
+        new file:   Semana_3/githubrepo/yarn.lock
+
+---
+
 # [0.0.18] - 03/09/2020
 ## Global Exception Handler
 ## Static files Route
