@@ -1,3 +1,23 @@
+# [0.0.20] - 07/09/2020
+## LocalStorage
+## Params between Routes with useRouteMatch
+## Link beside anchor to prevent reload
+## UseState initial state
+## External link redirect 
+
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/githubrepo/src/Styles/global.ts
+        modified:   Semana_3/githubrepo/src/pages/Dashboard/index.tsx
+        modified:   Semana_3/githubrepo/src/pages/Repository/index.tsx
+        new file:   Semana_3/githubrepo/src/pages/Repository/styles.ts
+        modified:   Semana_3/githubrepo/src/routes/index.tsx
+
+---
+
+
 # [0.0.19] - 07/09/2020
 ## React Router
 ## Fragment

@@ -23,7 +23,7 @@ body,input,button{
     padding: 40px 20px
 }
 
-button{
+button,a{
     cursor:pointer
 }
 `;

@@ -7,7 +7,8 @@ import Repository from '../pages/Repository'
 const Routes: React.FC = () => (
     <Switch>
         <Route path ="/" exact component={Dashboard}/>
-        <Route path ="/repository" component={Repository}/>        
+        <Route path ="/repository/:repository+" component={Repository}/>     
+           {/* O mais indica o final do nome do parametro */}
     </Switch>
 )
 // O exact serve para que as rotas que nao possuam / sejam executadas 
