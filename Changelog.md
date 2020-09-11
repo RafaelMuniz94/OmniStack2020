@@ -1,3 +1,37 @@
+# [0.0.21] - 10/09/2020
+## GoBarber web project Created
+## Global components
+## Components Interface
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/githubrepo/src/pages/Dashboard/index.tsx
+        new file:   Semana_3/gobarber/.gitignore
+        new file:   Semana_3/gobarber/README.md
+        new file:   Semana_3/gobarber/package.json
+        new file:   Semana_3/gobarber/public/index.html
+        new file:   Semana_3/gobarber/public/robots.txt
+        new file:   Semana_3/gobarber/src/App.tsx
+        new file:   Semana_3/gobarber/src/Assets/logo.svg
+        new file:   Semana_3/gobarber/src/Assets/sign-in-background.png
+        new file:   Semana_3/gobarber/src/components/Button/index.tsx
+        new file:   Semana_3/gobarber/src/components/Button/styles.ts
+        new file:   Semana_3/gobarber/src/components/Input/index.tsx
+        new file:   Semana_3/gobarber/src/components/Input/styles.ts
+        new file:   Semana_3/gobarber/src/index.tsx
+        new file:   Semana_3/gobarber/src/pages/SignIn/index.tsx
+        new file:   Semana_3/gobarber/src/pages/SignIn/styles.ts
+        new file:   Semana_3/gobarber/src/react-app-env.d.ts
+        new file:   Semana_3/gobarber/src/setupTests.ts
+        new file:   Semana_3/gobarber/src/styles/global.ts
+        new file:   Semana_3/gobarber/tsconfig.json
+        new file:   Semana_3/gobarber/yarn.lock
+        new file:   package.json
+        new file:   yarn.lock
+
+---
+
 # [0.0.20] - 07/09/2020
 ## LocalStorage
 ## Params between Routes with useRouteMatch

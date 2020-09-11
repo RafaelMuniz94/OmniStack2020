@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FormEvent } from "react";
 import { Title, Form, Repositories, Error } from "./styles";
 import logoimage from "../../Assets/page_logo.svg";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { FiChevronRight } from "react-icons/fi";
 import api from "../../Services/api";
 
@@ -74,7 +74,10 @@ const Dashboard: React.FC = () => {
       {/* A linha acima representa um if que so sera mostrado se o elemento a esquerda for true */}
       <Repositories>
         {repositories.map((repository) => (
-          <Link key={repository.full_name} to={`/repository/${repository.full_name}`}>
+          <Link
+            key={repository.full_name}
+            to={`/repository/${repository.full_name}`}
+          >
             <img
               src={repository.owner.avatar_url}
               alt={repository.owner.login}
