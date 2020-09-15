@@ -1,4 +1,28 @@
 # [0.0.21] - 10/09/2020
+## React Hooks - Unform
+## Tooltips
+## Error Icon Component
+## Yup Dependency for field validation
+
+**Changed Files**
+
+        modified:   package.json
+        modified:   src/App.tsx
+        new file:   src/Assets/createAccountBackground.png
+        new file:   src/components/ErrorCircle/index.tsx
+        new file:   src/components/ErrorCircle/styles.ts
+        modified:   src/components/Input/index.tsx
+        modified:   src/components/Input/styles.ts
+        new file:   src/components/ToolTip/index.tsx
+        new file:   src/components/ToolTip/styles.ts
+        modified:   src/pages/SignIn/index.tsx
+        new file:   src/pages/SignUp/index.tsx
+        new file:   src/pages/SignUp/styles.ts
+        new file:   src/utils/getValidationErrors.ts
+        modified:   yarn.lock
+---
+
+# [0.0.21] - 10/09/2020
 ## GoBarber web project Created
 ## Global components
 ## Components Interface
