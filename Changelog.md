@@ -1,4 +1,18 @@
-# [0.0.21] - 10/09/2020
+# [0.0.23] - 15/09/2020
+## Changelog Typo Fix
+## Logon Screen fixes
+## Logon Screen fields Validation
+## Logon Screen fields Dependencies Inclusion
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber/src/App.tsx
+        modified:   Semana_3/gobarber/src/pages/SignIn/index.tsx
+
+---
+
+# [0.0.22] - 14/09/2020
 ## React Hooks - Unform
 ## Tooltips
 ## Error Icon Component
