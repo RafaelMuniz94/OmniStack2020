@@ -6,20 +6,21 @@
 
 **Changed Files**
 
-        modified:   package.json
-        modified:   src/App.tsx
-        new file:   src/Assets/createAccountBackground.png
-        new file:   src/components/ErrorCircle/index.tsx
-        new file:   src/components/ErrorCircle/styles.ts
-        modified:   src/components/Input/index.tsx
-        modified:   src/components/Input/styles.ts
-        new file:   src/components/ToolTip/index.tsx
-        new file:   src/components/ToolTip/styles.ts
-        modified:   src/pages/SignIn/index.tsx
-        new file:   src/pages/SignUp/index.tsx
-        new file:   src/pages/SignUp/styles.ts
-        new file:   src/utils/getValidationErrors.ts
-        modified:   yarn.lock
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber/package.json
+        modified:   Semana_3/gobarber/src/App.tsx
+        new file:   Semana_3/gobarber/src/Assets/createAccountBackground.png
+        new file:   Semana_3/gobarber/src/components/ErrorCircle/index.tsx
+        new file:   Semana_3/gobarber/src/components/ErrorCircle/styles.ts
+        modified:   Semana_3/gobarber/src/components/Input/index.tsx
+        modified:   Semana_3/gobarber/src/components/Input/styles.ts
+        new file:   Semana_3/gobarber/src/components/ToolTip/index.tsx
+        new file:   Semana_3/gobarber/src/components/ToolTip/styles.ts
+        modified:   Semana_3/gobarber/src/pages/SignIn/index.tsx
+        new file:   Semana_3/gobarber/src/pages/SignUp/index.tsx
+        new file:   Semana_3/gobarber/src/pages/SignUp/styles.ts
+        new file:   Semana_3/gobarber/src/utils/getValidationErrors.ts
+        modified:   Semana_3/gobarber/yarn.lock
 ---
 
 # [0.0.21] - 10/09/2020
