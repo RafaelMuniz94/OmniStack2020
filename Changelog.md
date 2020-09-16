@@ -1,3 +1,26 @@
+# [0.0.25] - 15/09/2020
+## App Provider
+## Toast Provider
+## Toast notification
+## Toast self remove
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber/package.json
+        modified:   Semana_3/gobarber/src/App.tsx
+        new file:   Semana_3/gobarber/src/components/ToastContainer/Toast/index.tsx
+        new file:   Semana_3/gobarber/src/components/ToastContainer/Toast/styles.tsx
+        new file:   Semana_3/gobarber/src/components/ToastContainer/index.tsx
+        new file:   Semana_3/gobarber/src/components/ToastContainer/styles.ts
+        renamed:    Semana_3/gobarber/src/context/AuthContext.tsx -> Semana_3/gobarber/src/hooks/AuthContext.tsx
+        new file:   Semana_3/gobarber/src/hooks/ToastContext.tsx
+        new file:   Semana_3/gobarber/src/hooks/index.tsx
+        modified:   Semana_3/gobarber/src/pages/SignIn/index.tsx
+        modified:   Semana_3/gobarber/yarn.lock
+
+---
+
 # [0.0.24] - 15/09/2020
 ## CORS configuration at API
 ## API Call on React APP

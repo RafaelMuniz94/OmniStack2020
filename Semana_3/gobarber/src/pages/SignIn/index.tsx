@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useContext } from "react";
+import React, { useCallback, useRef } from "react";
 import { Form } from "@unform/web";
 import { FormHandles } from "@unform/core";
 import { Container, Content, Background } from "./styles";
@@ -7,40 +7,63 @@ import Input from "../../components/Input";
 import { FiLogIn, FiMail, FiLock } from "react-icons/fi";
 import logo from "../../Assets/logo.svg";
 import getValidationErrors from "../../utils/getValidationErrors";
-import { AuthContext } from "../../context/AuthContext";
+import { useAuth } from "../../hooks/AuthContext";
+import { useToast } from "../../hooks/ToastContext";
 import * as Yup from "yup";
 
-interface SignInFormData{
+interface SignInFormData {
   email: string;
   password: string;
 }
 
 const SignIn: React.FC = () => {
   let formRef = useRef<FormHandles>(null);
-  const { signIn } = useContext(AuthContext); // De Padrao vai renderizar duas vezes
-  let handleSubmit = useCallback(async (data: SignInFormData) => {
-    try {
-      let {email,password} = data
-      formRef.current?.setErrors({});
-      let schema = Yup.object().shape({
-        email: Yup.string()
-          .required("Email Obrigatório!")
-          .email("Digite um email válido"),
-        password: Yup.string().required(
-          "Forneça uma senha que atenda as politicas!"
-        ),
-      });
+  const { signIn } = useAuth(); // De Padrao vai renderizar duas vezes
+  const { addToast } = useToast();
+  let handleSubmit = useCallback(
+    async (data: SignInFormData) => {
+      try {
+        let { email, password } = data;
+        formRef.current?.setErrors({});
+        let schema = Yup.object().shape({
+          email: Yup.string()
+            .required("Email Obrigatório!")
+            .email("Digite um email válido"),
+          password: Yup.string().required(
+            "Forneça uma senha que atenda as politicas!"
+          ),
+        });
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-      signIn({email,password});
-    } catch (err) {
-      let error = getValidationErrors(err);
-      formRef.current?.setErrors(error);
-    }
-  }, [signIn]);
+        await signIn({ email, password });
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          let error = getValidationErrors(err);
+          formRef.current?.setErrors(error);
+        } else {
+          addToast({
+            title: "Ocorreu um erro!",
+            message: "Ocorreu um erro ao logar, verifique suas credenciais!",
+            type: "error",
+          });
+          addToast({
+            title: "Ocorreu um erro!",
+            message: "Ocorreu um erro ao logar, verifique suas credenciais!",
+            type: "info",
+          });
+          addToast({
+            title: "Ocorreu um erro!",
+            message: "Ocorreu um erro ao logar, verifique suas credenciais!",
+            type: "success",
+          });
+        }
+      }
+    },
+    [signIn,addToast]
+  );
 
   return (
     <Container>
