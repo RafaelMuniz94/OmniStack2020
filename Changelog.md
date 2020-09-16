@@ -1,3 +1,24 @@
+# [0.0.24] - 15/09/2020
+## CORS configuration at API
+## API Call on React APP
+## Context API Use
+## LocalStorage to save api Content
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_2/node/package.json
+        modified:   Semana_2/node/src/server.ts
+        modified:   Semana_2/node/yarn.lock
+        modified:   Semana_3/gobarber/package.json
+        modified:   Semana_3/gobarber/src/App.tsx
+        new file:   Semana_3/gobarber/src/context/AuthContext.tsx
+        modified:   Semana_3/gobarber/src/pages/SignIn/index.tsx
+        new file:   Semana_3/gobarber/src/services/api.ts
+        modified:   Semana_3/gobarber/yarn.lock
+        
+---
+
 # [0.0.23] - 15/09/2020
 ## Changelog Typo Fix
 ## Logon Screen fixes

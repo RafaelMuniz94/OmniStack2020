@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, useContext } from "react";
 import { Form } from "@unform/web";
 import { FormHandles } from "@unform/core";
 import { Container, Content, Background } from "./styles";
@@ -7,12 +7,20 @@ import Input from "../../components/Input";
 import { FiLogIn, FiMail, FiLock } from "react-icons/fi";
 import logo from "../../Assets/logo.svg";
 import getValidationErrors from "../../utils/getValidationErrors";
+import { AuthContext } from "../../context/AuthContext";
 import * as Yup from "yup";
+
+interface SignInFormData{
+  email: string;
+  password: string;
+}
 
 const SignIn: React.FC = () => {
   let formRef = useRef<FormHandles>(null);
-  let handleSubmit = useCallback(async (data: object) => {
+  const { signIn } = useContext(AuthContext); // De Padrao vai renderizar duas vezes
+  let handleSubmit = useCallback(async (data: SignInFormData) => {
     try {
+      let {email,password} = data
       formRef.current?.setErrors({});
       let schema = Yup.object().shape({
         email: Yup.string()
@@ -26,11 +34,13 @@ const SignIn: React.FC = () => {
       await schema.validate(data, {
         abortEarly: false,
       });
+
+      signIn({email,password});
     } catch (err) {
       let error = getValidationErrors(err);
       formRef.current?.setErrors(error);
     }
-  }, []);
+  }, [signIn]);
 
   return (
     <Container>
