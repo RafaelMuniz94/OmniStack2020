@@ -1,3 +1,33 @@
+# [0.0.26] - 15/09/2020
+## Add React-Spring dependecy
+## Add Toast Transition
+## Add Dashboard Route
+## Create Route component
+## Routes Redirect
+## Basic React App finished
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber/package.json
+        modified:   Semana_3/gobarber/public/index.html
+        modified:   Semana_3/gobarber/src/App.tsx
+        modified:   Semana_3/gobarber/src/components/ToastContainer/Toast/index.tsx
+        modified:   Semana_3/gobarber/src/components/ToastContainer/Toast/styles.tsx
+        modified:   Semana_3/gobarber/src/components/ToastContainer/index.tsx
+        modified:   Semana_3/gobarber/src/hooks/ToastContext.tsx
+        new file:   Semana_3/gobarber/src/pages/Dashboard/index.tsx
+        new file:   Semana_3/gobarber/src/pages/Dashboard/styles.tsx
+        modified:   Semana_3/gobarber/src/pages/SignIn/index.tsx
+        modified:   Semana_3/gobarber/src/pages/SignIn/styles.ts
+        modified:   Semana_3/gobarber/src/pages/SignUp/index.tsx
+        modified:   Semana_3/gobarber/src/pages/SignUp/styles.ts
+        new file:   Semana_3/gobarber/src/routes/Route.tsx
+        new file:   Semana_3/gobarber/src/routes/index.tsx
+        modified:   Semana_3/gobarber/yarn.lock
+
+---
+
 # [0.0.25] - 15/09/2020
 ## App Provider
 ## Toast Provider
