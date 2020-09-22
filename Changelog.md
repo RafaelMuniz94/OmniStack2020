@@ -1,3 +1,14 @@
+# [0.0.27] - 21/09/2020
+## React-Native project created
+## StatusBar configuration
+## Pod Dependecies Inclusion
+## Image configuration
+## Font inclusion
+
+**Changed Files**
+
+---
+
 # [0.0.26] - 15/09/2020
 ## Add React-Spring dependecy
 ## Add Toast Transition
