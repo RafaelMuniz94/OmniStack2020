@@ -20,3 +20,5 @@ module.exports = {
  * IOS - ios/pastaProjeto/info.plist
  */
 //Apos instalado rodar o comando yarn {os}
+
+// OBS: Colocar as fontes com o nome Postscript name, para ficar no modelo do IOS e Android

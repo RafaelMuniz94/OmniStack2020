@@ -1,3 +1,33 @@
+# [0.0.28] - 22/09/2020
+## LogIn page defined
+## Create Account page defined
+## Button Component created
+## Input Component created
+## Functional Route Inplementation
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber-native/gobarberapp/android/build.gradle
+        modified:   Semana_3/gobarber-native/gobarberapp/ios/Podfile.lock
+        modified:   Semana_3/gobarber-native/gobarberapp/ios/gobarberapp.xcodeproj/project.pbxproj
+        modified:   Semana_3/gobarber-native/gobarberapp/ios/gobarberapp/Info.plist
+        modified:   Semana_3/gobarber-native/gobarberapp/package.json
+        modified:   Semana_3/gobarber-native/gobarberapp/react-native.config.js
+        new file:   Semana_3/gobarber-native/gobarberapp/src/Components/Button/index.tsx
+        new file:   Semana_3/gobarber-native/gobarberapp/src/Components/Button/styles.ts
+        new file:   Semana_3/gobarber-native/gobarberapp/src/Components/Input/index.tsx
+        new file:   Semana_3/gobarber-native/gobarberapp/src/Components/Input/styles.ts
+        new file:   Semana_3/gobarber-native/gobarberapp/src/assets/fonts.ts
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignIn/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignIn/styles.ts
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignUp/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignUp/styles.ts
+        modified:   Semana_3/gobarber-native/gobarberapp/src/routes/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/yarn.lock
+
+---
+
 # [0.0.27] - 21/09/2020
 ## React-Native project created
 ## StatusBar configuration
