@@ -1,3 +1,22 @@
+# [0.0.29] - 23/09/2020
+## Imperative Hook insert on Input
+## Unform dependecy
+## Input accessibility improved
+## Input focus stylization
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber-native/gobarberapp/package.json
+        modified:   Semana_3/gobarber-native/gobarberapp/src/Components/Input/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/Components/Input/styles.ts
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignIn/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignIn/styles.ts
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignUp/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/yarn.lock
+        
+---
+
 # [0.0.28] - 22/09/2020
 ## LogIn page defined
 ## Create Account page defined
