@@ -1,3 +1,21 @@
+# [0.0.31] - 29/09/2020
+## Auth only routes
+## Loading Screen
+## App routes
+## LogOut function on dashboard
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber-native/gobarberapp/src/hooks/auth.tsx
+        new file:   Semana_3/gobarber-native/gobarberapp/src/pages/Dashboard/index.tsx
+        new file:   Semana_3/gobarber-native/gobarberapp/src/pages/Dashboard/styles.ts
+        new file:   Semana_3/gobarber-native/gobarberapp/src/routes/app.routes.tsx
+        new file:   Semana_3/gobarber-native/gobarberapp/src/routes/auth.routes.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/routes/index.tsx
+
+---
+
 # [0.0.30] - 28/09/2020
 ## API call with Axios
 ## Form Field validations
