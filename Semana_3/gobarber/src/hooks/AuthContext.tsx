@@ -1,7 +1,7 @@
 import React, { createContext, useCallback, useState, useContext } from "react"; // contexto para tornar acessivel entre componentes que nao tenham relacao
 import api from "../services/api";
 
-interface SignInCredentias {
+interface SignInCredentials {
   email: string;
   password: string;
 }
@@ -14,7 +14,7 @@ interface AuthState {
 interface AuthContextData {
   user: object;
   token?: string;
-  signIn(credentials: SignInCredentias): Promise<void>;
+  signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }
 

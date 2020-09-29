@@ -48,7 +48,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
     registerField<string>({
       name: fieldName,
       ref: InputValueRef.current,
-      path: `value`,
+      path: 'value',
       setValue(ref: any, value) {
         InputValueRef.current.value = value;
         inputElementRef.current.setNativeProps({ text: value }); // Muda oxto do input quando o valor dentro da referencia seja nula
@@ -66,8 +66,12 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
     },
   })); //Passa uma funcionalidade de um componente interno para seu componente pai
   return (
-    <Container isFocused={isFocused}>
-      <Icon name={icon} size={20} color={isFocused || isFilled ? "#FF9000" : "#666360"} />
+    <Container isFocused={isFocused} isErrored={!!error}>
+      <Icon
+        name={icon}
+        size={20}
+        color={isFocused || isFilled ? "#FF9000" : "#666360"}
+      />
       <TextInput
         ref={inputElementRef}
         keyboardAppearance="dark" //Apenas IOS

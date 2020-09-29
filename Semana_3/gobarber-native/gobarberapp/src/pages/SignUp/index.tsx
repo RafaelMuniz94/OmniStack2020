@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
   TextInput,
+  Alert,
 } from "react-native";
 import logoImg from "../../assets/logo.png"; // Essa linha fica com erro ate criar a pasta @types
 import Button from "../../Components/Button";
@@ -13,17 +14,59 @@ import Input from "../../Components/Input";
 import Icon from "react-native-vector-icons/Feather";
 import { useNavigation } from "@react-navigation/native";
 import { Form } from "@unform/mobile";
+import * as Yup from "yup";
+import getValidationErrors from "../../utils/getValidationErrors";
 import { FormHandles } from "@unform/core";
+import api from '../../services/api'
 import { Container, Title, BackToSignIn, BackToSignInText } from "./styles";
+
+
+interface SignUpFormData{
+  name:string,
+  email:string,
+  password:string
+}
 
 const SignUp: React.FC = () => {
   const navigation = useNavigation();
   const formRef = useRef<FormHandles>(null);
   let emailInputRef = useRef<TextInput>(null);
   let passwordInputRef = useRef<TextInput>(null);
-  const handleSubmit = useCallback((data: object) => {
-    console.log(data);
-  }, []);
+  const handleSubmit = useCallback(async (data: SignUpFormData) => {
+    try {
+      formRef.current?.setErrors({});
+      let schema = Yup.object().shape({
+        name: Yup.string().
+        required("Nome é obrigatório!"),
+        email: Yup.string()
+          .required("O Email é obrigatório!")
+          .email("O e-mail deve ter um formato válido!"),
+        password: Yup.string()
+        .min(6, "A senha deve possuir no mínimo 6 caracteres!")
+        .required("É necessário fornecer uma senha!"),
+      });
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
+      await api.post('/users', data)
+      Alert.alert(`Cadastro realizado com sucesso!`, 'Pode realizar login na Aplicação!')
+      navigation.goBack()
+
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+        let errors = getValidationErrors(err);
+        console.log(errors)
+        formRef.current?.setErrors(errors);
+        return;
+      }
+
+      Alert.alert(
+        "Erro ao criar conta",
+        "Não foi possível criar conta, tente novamente mais tarde"
+      );
+    }
+  }, [navigation]);
 
   return (
     <>
@@ -59,7 +102,7 @@ const SignUp: React.FC = () => {
                 keyboardType="email-address"
                 autoCorrect={false}
                 autoCapitalize="none"
-                name="Email"
+                name="email"
                 icon="mail"
                 placeholder="E-mail"
                 enablesReturnKeyAutomatically={true}
@@ -70,7 +113,7 @@ const SignUp: React.FC = () => {
               />
               <Input
                 ref={passwordInputRef}
-                name="Password"
+                name="password"
                 icon="lock"
                 placeholder="Senha"
                 secureTextEntry

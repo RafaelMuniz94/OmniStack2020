@@ -1,3 +1,31 @@
+# [0.0.30] - 28/09/2020
+## API call with Axios
+## Form Field validations
+## Auth Hook
+## Auth Context
+## Auth Provider
+## SignIn functional
+## Validation Errors Function
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_3/gobarber-native/gobarberapp/ios/Podfile.lock
+        modified:   Semana_3/gobarber-native/gobarberapp/package.json
+        modified:   Semana_3/gobarber-native/gobarberapp/src/App.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/Components/Input/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/Components/Input/styles.ts
+        new file:   Semana_3/gobarber-native/gobarberapp/src/hooks/auth.tsx
+        new file:   Semana_3/gobarber-native/gobarberapp/src/hooks/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignIn/index.tsx
+        modified:   Semana_3/gobarber-native/gobarberapp/src/pages/SignUp/index.tsx
+        new file:   Semana_3/gobarber-native/gobarberapp/src/services/api.ts
+        new file:   Semana_3/gobarber-native/gobarberapp/src/utils/getValidationErrors.ts
+        modified:   Semana_3/gobarber-native/gobarberapp/yarn.lock
+        modified:   Semana_3/gobarber/src/hooks/AuthContext.tsx
+
+---
+
 # [0.0.29] - 23/09/2020
 ## Imperative Hook insert on Input
 ## Unform dependecy
