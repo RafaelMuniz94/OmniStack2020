@@ -1,3 +1,51 @@
+# [0.0.32] - 04/10/2020
+## Week 2 App change to fit DDD patterns
+
+**Changed Files**
+
+        modified:   Changelog.md
+        new file:   Semana_2/Arquitetura.txt
+        new file:   Semana_4/Arquitetura.txt
+        new file:   Semana_4/node/ormconfig.json
+        new file:   Semana_4/node/package.json
+        new file:   Semana_4/node/src/@types/express.d.ts
+        new file:   Semana_4/node/src/config/auth.ts
+        new file:   Semana_4/node/src/config/upload.ts
+        new file:   Semana_4/node/src/modules/appointments/Dtos/ICreateAppointmentsDTO.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/Typeorm/entities/Appointments.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/Typeorm/repositories/AppointmentsRepository.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/http/routes/appointments.routes.ts
+        new file:   Semana_4/node/src/modules/appointments/repositories/IAppointmentsRepository.ts
+        new file:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        new file:   Semana_4/node/src/modules/users/Dtos/ICreateUserDTO.ts
+        new file:   Semana_4/node/src/modules/users/infra/Typeorm/entities/Users.ts
+        new file:   Semana_4/node/src/modules/users/infra/Typeorm/repositories/UsersRepository.ts
+        new file:   Semana_4/node/src/modules/users/infra/http/middlewares/ensureAuthenticated.ts
+        new file:   Semana_4/node/src/modules/users/infra/http/routes/sessions.routes.ts
+        new file:   Semana_4/node/src/modules/users/infra/http/routes/users.routes.ts
+        new file:   Semana_4/node/src/modules/users/repositories/IUsersRepository.ts
+        new file:   Semana_4/node/src/modules/users/services/AuthenticateUserService.ts
+        new file:   Semana_4/node/src/modules/users/services/CreateUserService.ts
+        new file:   Semana_4/node/src/modules/users/services/UpdateUserAvatarService.ts
+        new file:   Semana_4/node/src/shared/errors/AppError.ts
+        new file:   Semana_4/node/src/shared/infra/Info.txt
+        new file:   Semana_4/node/src/shared/infra/Typeorm/index.ts
+        new file:   Semana_4/node/src/shared/infra/Typeorm/migrations/1598819008070-CreateAppointments.ts
+        new file:   Semana_4/node/src/shared/infra/Typeorm/migrations/1598917118367-Users.ts
+        new file:   Semana_4/node/src/shared/infra/Typeorm/migrations/1598920821694-AlterProvidertoProviderID.ts
+        new file:   Semana_4/node/src/shared/infra/Typeorm/migrations/1599010958145-AddAvatarFieldsToUsers.ts
+        new file:   Semana_4/node/src/shared/infra/http/routes/index.ts
+        new file:   Semana_4/node/src/shared/infra/http/server.ts
+        new file:   Semana_4/node/tmp/.gitkeep
+        new file:   Semana_4/node/tmp/9ccad2a57b39ee5a2543-avatar.jpg
+        new file:   Semana_4/node/tsconfig.json
+        new file:   Semana_4/node/yarn copy.lock
+        new file:   Semana_4/node/yarn-error.log
+        new file:   Semana_4/node/yarn.lock
+
+
+---
+
 # [0.0.31] - 29/09/2020
 ## Auth only routes
 ## Loading Screen

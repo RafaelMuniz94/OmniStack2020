@@ -1,0 +1,3 @@
+Nessa camada temos tudo aquilo que corre risco de ser modificado um dia, ou seja, caso um dia nossa comunicacao seja com um DB X e possa ser trocado por um DB Y em algum outro momento.
+
+Assim como componentes utilizados por libs especificas e que podem no futuro ser trocada por outras

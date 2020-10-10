@@ -1,0 +1,10 @@
+Atual:
+src - Codigo fonte e conteudo que interfere na aplicacao 
+    config
+    database
+    errors
+    middlewares
+    models
+    repositories
+    routes
+    services

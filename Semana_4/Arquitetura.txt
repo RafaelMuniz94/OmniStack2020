@@ -1,0 +1,23 @@
+Antiga:
+src - Codigo fonte e conteudo que interfere na aplicacao 
+    config
+    database
+    errors
+    middlewares
+    models
+    repositories
+    routes
+    services
+
+Dominio - Qual a area de conhecimento daquele modulo da aplicacao 
+
+
+DDD - Domain Driven Design
+TDD - Test Driven Development - Criar as regras da aplicacao antes de ela estar funcional
+SCRUM: Metodologia agil para organizacao do time
+
+Temos a divisao entre camadas, sendo as principais:
+
+
+Dominio - Onde ficam as regras de negocios
+Infra - Como ela se comunica com componentes e codigo para que o dominio seja utilizado
