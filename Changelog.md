@@ -3,6 +3,21 @@
 
 **Changed Files**
 
+        modified:   Changelog.md
+        modified:   Semana_4/node/package.json
+        modified:   Semana_4/node/src/modules/appointments/infra/http/routes/appointments.routes.ts
+        modified:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        modified:   Semana_4/node/src/modules/users/infra/Typeorm/repositories/UsersRepository.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/routes/sessions.routes.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/routes/users.routes.ts
+        modified:   Semana_4/node/src/modules/users/services/AuthenticateUserService.ts
+        modified:   Semana_4/node/src/modules/users/services/CreateUserService.ts
+        modified:   Semana_4/node/src/modules/users/services/UpdateUserAvatarService.ts
+        modified:   Semana_4/node/src/shared/infra/http/server.ts
+        modified:   Semana_4/node/yarn-error.log
+        modified:   Semana_4/node/yarn.lock
+        
+
 ---
 
 # [0.0.32] - 04/10/2020
