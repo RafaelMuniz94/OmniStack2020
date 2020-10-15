@@ -1,25 +1,19 @@
 import { Router } from "express";
 import Users from "../../Typeorm/entities/Users";
-import UsersRepository from "@users/infra/Typeorm/repositories/UsersRepository";
-import CreateUserService from "../../../services/CreateUserService";
-import UpdateUserAvatarService from "../../../services/UpdateUserAvatarService";
+
+
 import ensureAuthenticated from "../middlewares/ensureAuthenticated";
 import multer from "multer";
 import uploadConfig from "../../../../../config/upload";
+import UserController from '@users/infra/http/controllers/UserController'
+import UserAvatarController from '@users/infra/http/controllers/UserAvatarController'
 
 const usersRouter = Router();
 const upload = multer(uploadConfig); // Instancia do multer
+let userController = new UserController()
+let userAvatarController = new UserAvatarController()
 
-
-usersRouter.post("/", async (request, response) => {
-  let { email, name, password } = request.body;
-
-  let userRepository = new UsersRepository()
-
-  let user = await new CreateUserService(userRepository).execute({ email, name, password });
-  delete user.password;
-  return response.status(201).json(user);
-});
+usersRouter.post("/", userController.create );
 
 // usersRouter.get("/", async (request, response) => {
   
@@ -36,16 +30,7 @@ usersRouter.patch(
   "/avatar",
   ensureAuthenticated, // Middleware da autorizacao
   upload.single("avatar"), //Esse middleware serve para indicar o campo que ira conter a imagem e indicar que apenas um arquivo sera feito o upload
-  async (request, response) => {
-    let userRepository = new UsersRepository()
-    let updateService = new UpdateUserAvatarService(userRepository);
-    let user = await updateService.execute({
-      user_id: request.user.id,
-      avatarFileName: request.file.filename,
-    });
-    delete user.password;
-    return response.json(user);
-  }
+  userAvatarController.update
 );
 
 export default usersRouter;

@@ -4,14 +4,17 @@ import path from "path";
 import fs from "fs";
 import uploadConfig from "../../../config/upload";
 import AppError from '../../../shared/errors/AppError'
+import {inject,injectable} from 'tsyringe'
 
 interface IRequestDTO {
   user_id: string;
   avatarFileName: string;
 }
 
+@injectable()
 class UpdateUserAvatarService {
   constructor(
+    @inject("UsersRepository")
     private userRepository: UserRepository
   ){}
   public async execute({

@@ -2,6 +2,7 @@ import User from "../infra/Typeorm/entities/Users";
 import { hash } from "bcryptjs";
 import UserRepository from "@users/repositories/IUsersRepository";
 import AppError from "../../../shared/errors/AppError";
+import { inject, injectable } from "tsyringe";
 
 interface IRequestDTO {
   name: string;
@@ -9,8 +10,12 @@ interface IRequestDTO {
   password: string;
 }
 
+@injectable()
 class CreateUserService {
-  constructor(private userRepository: UserRepository) {}
+  constructor(
+    @inject("UsersRepository")
+    private userRepository: UserRepository
+  ) {}
 
   public async execute({ name, email, password }: IRequestDTO): Promise<User> {
     let userExists = await this.userRepository.findByEmail(email);
@@ -21,8 +26,11 @@ class CreateUserService {
 
     let hashedPassword = await hash(password, 16);
 
-    let user = await this.userRepository.create({ name, email, password: hashedPassword });
-
+    let user = await this.userRepository.create({
+      name,
+      email,
+      password: hashedPassword,
+    });
 
     return user;
   }

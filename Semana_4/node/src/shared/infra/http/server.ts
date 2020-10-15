@@ -1,3 +1,4 @@
+import "reflect-metadata"
 import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors"; // Para poder tratar errors async, deve estar abaixo da importacao do express
 import routes from "./routes";
@@ -6,7 +7,7 @@ import "reflect-metadata";
 import "@shared/infra/Typeorm";
 import uploadConfig from "@config/upload";
 import AppError from "@shared/errors/AppError";
-
+import "@shared/container" // Importando container de dependencias
 const app = express();
 
 app.use(Cors({

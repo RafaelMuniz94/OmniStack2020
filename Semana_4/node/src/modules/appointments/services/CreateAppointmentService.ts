@@ -1,16 +1,20 @@
 import Appointments from "../infra/Typeorm/entities/Appointments";
 import AppError from '@shared/errors/AppError'
 import IAppointmentsRepository from "../repositories/IAppointmentsRepository";
+import {injectable,inject} from 'tsyringe'
+
 
 interface IRequestDTO {
   provider_id: string;
   parsedDate: Date;
 }
 
+@injectable()
 class CreateAppointmentService {
 
 
   constructor(
+    @inject("AppointmentsRepository")
     private appointmentsRepository: IAppointmentsRepository // Cria automaticamente a variavel dentro da classe
   ){
 

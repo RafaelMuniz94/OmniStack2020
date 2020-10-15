@@ -4,6 +4,7 @@ import { sign } from "jsonwebtoken"; // Assina o token
 import AppError from "../../../shared/errors/AppError";
 import User from "../infra/Typeorm/entities/Users";
 import authConfig from "../../../config/auth";
+import { inject, injectable } from "tsyringe";
 
 interface IRequestDto {
   email: string;
@@ -14,9 +15,12 @@ interface IResponseDTO {
   user: User;
   token: string;
 }
-
+@injectable()
 class AuthenticateUserService {
-  constructor(private usersRepository: UsersRepository) {}
+  constructor(
+    @inject("UsersRepository")
+    private usersRepository: UsersRepository
+  ) {}
 
   public async execute({
     email,

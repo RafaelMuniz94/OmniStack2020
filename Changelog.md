@@ -1,3 +1,10 @@
+# [0.0.33] - 15/10/2020
+## Dependency Injection
+
+**Changed Files**
+
+---
+
 # [0.0.32] - 04/10/2020
 ## Week 2 App change to fit DDD patterns
 
