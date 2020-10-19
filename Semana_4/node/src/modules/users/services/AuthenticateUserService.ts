@@ -1,5 +1,5 @@
-import UsersRepository from "@users/repositories/IUsersRepository";
-import { compare } from "bcryptjs";
+import IUsersRepository from "@users/repositories/IUsersRepository";
+import IHashProvider from '@users/providers/HashProvider/Models/IHashProvider'
 import { sign } from "jsonwebtoken"; // Assina o token
 import AppError from "../../../shared/errors/AppError";
 import User from "../infra/Typeorm/entities/Users";
@@ -19,7 +19,9 @@ interface IResponseDTO {
 class AuthenticateUserService {
   constructor(
     @inject("UsersRepository")
-    private usersRepository: UsersRepository
+    private usersRepository: IUsersRepository,
+    @inject("HashProvider")
+    private hashProvider: IHashProvider
   ) {}
 
   public async execute({
@@ -30,7 +32,7 @@ class AuthenticateUserService {
 
     if (!user) throw new AppError("Incorrect email/password combination.", 401);
     let passwordReceived = user.password || "";
-    let passwordMatched = await compare(password, passwordReceived);
+    let passwordMatched = await this.hashProvider.compareHash(password, passwordReceived);
 
     if (!passwordMatched)
       throw new AppError("Incorrect email/password combination.", 401);

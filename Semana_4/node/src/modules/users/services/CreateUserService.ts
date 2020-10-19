@@ -1,6 +1,6 @@
 import User from "../infra/Typeorm/entities/Users";
-import { hash } from "bcryptjs";
-import UserRepository from "@users/repositories/IUsersRepository";
+import IHashProvider from '@users/providers/HashProvider/Models/IHashProvider'
+import IUserRepository from "@users/repositories/IUsersRepository";
 import AppError from "../../../shared/errors/AppError";
 import { inject, injectable } from "tsyringe";
 
@@ -14,7 +14,9 @@ interface IRequestDTO {
 class CreateUserService {
   constructor(
     @inject("UsersRepository")
-    private userRepository: UserRepository
+    private userRepository: IUserRepository,
+    @inject('HashProvider')
+    private hashProvider: IHashProvider
   ) {}
 
   public async execute({ name, email, password }: IRequestDTO): Promise<User> {
@@ -24,7 +26,7 @@ class CreateUserService {
 
     if (userExists) throw new AppError("User already used!");
 
-    let hashedPassword = await hash(password, 16);
+    let hashedPassword = await this.hashProvider.generateHash(password)
 
     let user = await this.userRepository.create({
       name,

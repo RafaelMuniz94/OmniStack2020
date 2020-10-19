@@ -3,8 +3,9 @@ bundle.js
 build/
 dist/
 .vscode/
+coverage/
 Semana_2/node/src/config/auth.ts
-
+uploads/
 
 
 Semana_2/node/tmp/*

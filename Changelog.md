@@ -1,3 +1,39 @@
+# [0.0.34] - 17/10/2020
+## User Services Tests
+## User Providers
+## Readme with Application Rules
+
+**Changed Files**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        new file:   Semana_4/ReadME.md
+        new file:   Semana_4/node/jest.config.js
+        modified:   Semana_4/node/package.json
+        modified:   Semana_4/node/src/config/upload.ts
+        new file:   Semana_4/node/src/modules/appointments/repositories/fakes/fakeAppointmentsRepository.ts
+        new file:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.spec.ts
+        new file:   Semana_4/node/src/modules/users/providers/HashProvider/Fakes/FakeHashProvider.ts
+        new file:   Semana_4/node/src/modules/users/providers/HashProvider/Implementations/BCryptHashProvider.ts
+        new file:   Semana_4/node/src/modules/users/providers/HashProvider/Models/IHashProvider.ts
+        new file:   Semana_4/node/src/modules/users/providers/index.ts
+        new file:   Semana_4/node/src/modules/users/repositories/fakes/FakeUsersRepository.ts
+        modified:   Semana_4/node/src/modules/users/services/AuthenticateUserService.ts
+        modified:   Semana_4/node/src/modules/users/services/CreateUserService.ts
+        modified:   Semana_4/node/src/modules/users/services/UpdateUserAvatarService.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/AuthenticateUserService.spec.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/CreateUserService.spec.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/UpdateUserAvatarService.spec.ts
+        modified:   Semana_4/node/src/shared/container/index.ts
+        new file:   Semana_4/node/src/shared/container/providers/StorageProviders/fakes/FakeStorageProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/StorageProviders/implementations/DiskStorageProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/StorageProviders/models/IStorageProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/index.ts
+        modified:   Semana_4/node/tsconfig.json
+        modified:   Semana_4/node/yarn.lock
+
+---
+
 # [0.0.33] - 15/10/2020
 ## Dependency Injection
 
