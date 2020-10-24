@@ -8,6 +8,11 @@ class UsersRepository implements IUserRepository {
   constructor() {
     this.ormRepository = getRepository(Users);
   }
+  public async findAll(): Promise<Users[]> {
+    let users = await this.ormRepository.find({})
+
+    return users
+  }
 
   public async create({
     name,

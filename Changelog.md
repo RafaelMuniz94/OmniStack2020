@@ -1,3 +1,46 @@
+# [0.0.35] - 24/10/2020
+## Finished unit Test
+## Reset Password service
+## Send email service
+## User Token Repository
+## User Token Migration
+## Ethereal mail Provider integration
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_4/ReadME.md
+        modified:   Semana_4/node/ormconfig.json
+        modified:   Semana_4/node/package.json
+        new file:   Semana_4/node/src/modules/users/infra/Typeorm/entities/UserToken.ts
+        modified:   Semana_4/node/src/modules/users/infra/Typeorm/repositories/UsersRepository.ts
+        new file:   Semana_4/node/src/modules/users/infra/Typeorm/repositories/UsersTokenRepository.ts
+        new file:   Semana_4/node/src/modules/users/infra/http/controllers/ForgotPasswordController.ts
+        new file:   Semana_4/node/src/modules/users/infra/http/controllers/ResetPasswordController.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/controllers/UserController.ts
+        new file:   Semana_4/node/src/modules/users/infra/http/routes/password.routes.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/routes/users.routes.ts
+        new file:   Semana_4/node/src/modules/users/repositories/IUserTokenRepository.ts
+        modified:   Semana_4/node/src/modules/users/repositories/IUsersRepository.ts
+        new file:   Semana_4/node/src/modules/users/repositories/fakes/FakeUserTokenRepository.ts
+        new file:   Semana_4/node/src/modules/users/services/FindAllUsersService.ts
+        new file:   Semana_4/node/src/modules/users/services/ResetPasswordService.ts
+        new file:   Semana_4/node/src/modules/users/services/SendForgotPasswordEmailService.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/ResetPasswordService.spec.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/SendForgotPasswordEmailService.spec.ts
+        modified:   Semana_4/node/src/shared/container/index.ts
+        new file:   Semana_4/node/src/shared/container/providers/SendEmailProvider/fakes/FakeMailProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/SendEmailProvider/implementations/EtherealMailProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/SendEmailProvider/models/IMailProvider.ts
+        modified:   Semana_4/node/src/shared/container/providers/index.ts
+        new file:   Semana_4/node/src/shared/infra/Typeorm/migrations/1603566352136-CreateUserTokens.ts
+        new file:   Semana_4/node/src/shared/infra/http/middlewares/logRoutes.ts
+        modified:   Semana_4/node/src/shared/infra/http/routes/index.ts
+        modified:   Semana_4/node/src/shared/infra/http/server.ts
+        modified:   Semana_4/node/yarn.lock
+
+---
+
 # [0.0.34] - 17/10/2020
 ## User Services Tests
 ## User Providers

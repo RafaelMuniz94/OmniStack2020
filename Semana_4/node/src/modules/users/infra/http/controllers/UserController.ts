@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import CreateUserService from "../../../services/CreateUserService";
-import {container} from "tsyringe"
-
+import FindAllUsersService from "@users/services/FindAllUsersService";
+import { container } from "tsyringe";
 
 export default class UserController {
   public async create(request: Request, response: Response): Promise<Response> {
@@ -14,5 +14,8 @@ export default class UserController {
     return response.status(201).json(user);
   }
 
-
+  public async index(request: Request, response: Response): Promise<Response> {
+    let users = await container.resolve(FindAllUsersService).execute();
+    return response.status(200).json(users);
+  }
 }
