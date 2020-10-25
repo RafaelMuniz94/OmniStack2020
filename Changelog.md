@@ -1,3 +1,12 @@
+# [0.0.36] - 24/10/2020
+## Email template provider
+## Email template Interface
+## Sending email with nodemailer dependency
+
+**Changed Files**
+
+---
+
 # [0.0.35] - 24/10/2020
 ## Finished unit Test
 ## Reset Password service
