@@ -5,6 +5,21 @@
 
 **Changed Files**
 
+        modified:   Changelog.md
+        modified:   Semana_4/node/package.json
+        modified:   Semana_4/node/src/modules/users/services/SendForgotPasswordEmailService.ts
+        new file:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/dtos/IParseMailTemplateDTO.ts
+        new file:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/fakes/FakeMailTemplateProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/implementations/HandleBarsMailTemplateProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/models/IMailTemplateProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/SendEmailProvider/dtos/ISendEmailDTO.ts
+        modified:   Semana_4/node/src/shared/container/providers/SendEmailProvider/fakes/FakeMailProvider.ts
+        modified:   Semana_4/node/src/shared/container/providers/SendEmailProvider/implementations/EtherealMailProvider.ts
+        modified:   Semana_4/node/src/shared/container/providers/SendEmailProvider/models/IMailProvider.ts
+        modified:   Semana_4/node/src/shared/container/providers/index.ts
+        modified:   Semana_4/node/yarn-error.log
+        modified:   Semana_4/node/yarn.lock
+
 ---
 
 # [0.0.35] - 24/10/2020
