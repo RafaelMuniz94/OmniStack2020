@@ -1,3 +1,23 @@
+# [0.0.37] - 26/10/2020
+## User profile update
+## Email Template with template engine
+## Test Fixes
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_4/ReadME.md
+        modified:   Semana_4/node/src/modules/users/repositories/fakes/FakeUsersRepository.ts
+        modified:   Semana_4/node/src/modules/users/services/SendForgotPasswordEmailService.ts
+        new file:   Semana_4/node/src/modules/users/services/UpdateUserProfileService.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/UpdateUserProfileService.spec.ts
+        new file:   Semana_4/node/src/modules/users/views/forgot_passwords.hbs
+        modified:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/dtos/IParseMailTemplateDTO.ts
+        modified:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/fakes/FakeMailTemplateProvider.ts
+        modified:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/implementations/HandleBarsMailTemplateProvider.ts
+        
+---
+
 # [0.0.36] - 24/10/2020
 ## Email template provider
 ## Email template Interface

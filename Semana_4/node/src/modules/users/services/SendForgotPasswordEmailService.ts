@@ -3,6 +3,8 @@ import AppError from "@shared/errors/AppError";
 import IUserRepository from "@users/repositories/IUsersRepository";
 import IUserTokenRepository from "@users/repositories/IUserTokenRepository";
 import { inject, injectable } from "tsyringe";
+import path from 'path'
+
 
 interface IRequestDTO {
   email: string;
@@ -28,7 +30,7 @@ class SendForgotPasswordEmailService {
 
     let { token } = await this.userTokenRepository.generate(user.id);
 
-    let body = `Pedido de recuperação de senha recebido com sucesso!\nUtilize o token: ${token} para recuperação!`;
+    let  file = path.resolve(__dirname,'..','views','forgot_passwords.hbs')
     await this.mailProvider.sendMail({
       subject: `Recuperação de Senha!`,
       to: {
@@ -37,10 +39,12 @@ class SendForgotPasswordEmailService {
       },
       from: { email: "equipe@gobarber.com", name: "Equipe GoBarber" },
       templateData: {
-        template: "Olá, {{name}}: {{token}}",
+        file,
         variables: {
           name: user.name,
           token,
+          link: `http://localhost:3000/reset_password?token=${token}`,
+          senderName: "Equipe GoBarber"
         },
       },
     });

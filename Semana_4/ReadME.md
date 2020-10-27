@@ -3,9 +3,9 @@
 **RF - Requisitos funcionais**
 > Quais a funcionalidades que temos dentro do macro recurso
 
-- [ ]  O usuario deve poder recuperar sua senha informando o email;
-- [ ]  O usuario deve receber um email com instrucoes de recuperacao de senha;
-- [ ]  O usuario deve poder resetar sua senha;
+- [X]  O usuario deve poder recuperar sua senha informando o email;
+- [X]  O usuario deve receber um email com instrucoes de recuperacao de senha;
+- [X]  O usuario deve poder resetar sua senha;
   
 
 **RNF - Requisitos não funcionais**

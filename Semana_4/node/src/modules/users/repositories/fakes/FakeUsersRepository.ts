@@ -6,6 +6,9 @@ import IUserRepository from "@users/repositories/IUsersRepository";
 class UsersRepository implements IUserRepository {
   private users: Users[] = [];
 
+  public async findAll(): Promise<Users[]> {
+    return this.users;
+  }
   public async create({
     name,
     email,
@@ -31,7 +34,7 @@ class UsersRepository implements IUserRepository {
     let index = this.users.findIndex((u) => u.id === user.id);
     this.users[index] = user;
 
-    return user
+    return user;
   }
 }
 
