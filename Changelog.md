@@ -1,3 +1,21 @@
+# [0.0.38] - 30/10/2020
+## Profile Route
+## Show Profile Service
+## Show Profile Test
+## Profile Controller
+
+**Changed Files**
+
+        modified:   Changelog.md
+        new file:   Semana_4/node/src/modules/users/infra/http/controllers/ProfileController.ts
+        new file:   Semana_4/node/src/modules/users/infra/http/routes/profile.routes.ts
+        new file:   Semana_4/node/src/modules/users/services/ShowProfileService.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/FindAllUsersService.spec.ts
+        new file:   Semana_4/node/src/modules/users/services/tests/ShowProfileService.spec.ts
+        modified:   Semana_4/node/src/shared/infra/http/routes/index.ts
+
+---
+
 # [0.0.37] - 26/10/2020
 ## User profile update
 ## Email Template with template engine
