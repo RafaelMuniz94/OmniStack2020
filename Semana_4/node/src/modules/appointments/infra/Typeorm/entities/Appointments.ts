@@ -21,8 +21,15 @@ class Appointments {
   provider_id: string;
 
   @ManyToOne(() => User) // Relacao Muitos para UM
-  @JoinColumn({name: 'provider_id'}) // Relacao Muitos para UM
+  @JoinColumn({ name: "provider_id" }) // Relacao Muitos para UM
   provider: User;
+
+  @Column()
+  user_id: string;
+
+  @ManyToOne(() => User)
+  @JoinColumn({ name: `user_id` })
+  user: User;
 
   @Column("timestamp with time zone")
   date: Date;

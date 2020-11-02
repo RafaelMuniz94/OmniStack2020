@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import CreateUserService from "../../../services/CreateUserService";
-import FindAllUsersService from "@users/services/FindAllUsersService";
+import FindAllUsersService from "@modules/users/services/FindAllUsersService";
 import { container } from "tsyringe";
 
 export default class UserController {

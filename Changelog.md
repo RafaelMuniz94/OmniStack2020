@@ -1,3 +1,46 @@
+# [0.0.39] - 02/11/2020
+## Month Availability Service
+## Month Availability test
+## Day Availability Service
+## Day Availability Test
+## Appointments creation improvments
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_4/ReadME.md
+        modified:   Semana_4/node/src/modules/appointments/Dtos/ICreateAppointmentsDTO.ts
+        new file:   Semana_4/node/src/modules/appointments/Dtos/IFindAllInDayFromProviderDTO.ts
+        new file:   Semana_4/node/src/modules/appointments/Dtos/IFindAllInMonthFromProviderDTO.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/Typeorm/entities/Appointments.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/Typeorm/repositories/AppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/AppointmentController.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderDailyAvailabilityController.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderMonthAvailabilityController.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/controllers/ProvidersController.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/http/routes/providers.routes.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/IAppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/fakes/fakeAppointmentsRepository.ts
+        deleted:    Semana_4/node/src/modules/appointments/services/CreateAppointmentService.spec.ts
+        modified:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        new file:   Semana_4/node/src/modules/appointments/services/ListProviderDayAvailabilityService.ts
+        new file:   Semana_4/node/src/modules/appointments/services/ListProviderMonthAvailabilityService.ts
+        new file:   Semana_4/node/src/modules/appointments/services/ListProvidersService.ts
+        new file:   Semana_4/node/src/modules/appointments/services/tests/CreateAppointmentService.spec.ts
+        new file:   Semana_4/node/src/modules/appointments/services/tests/ListProviderDayAvailabilityService.spec.ts
+        new file:   Semana_4/node/src/modules/appointments/services/tests/ListProviderMonthAvailabilityService.spec.ts
+        new file:   Semana_4/node/src/modules/appointments/services/tests/ListProvidersService.spec.ts
+        new file:   Semana_4/node/src/modules/users/Dtos/IFindAllProvidersDTO.ts
+        modified:   Semana_4/node/src/modules/users/infra/Typeorm/repositories/UsersRepository.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/controllers/UserController.ts
+        modified:   Semana_4/node/src/modules/users/repositories/IUsersRepository.ts
+        modified:   Semana_4/node/src/modules/users/repositories/fakes/FakeUsersRepository.ts
+        modified:   Semana_4/node/src/modules/users/services/tests/FindAllUsersService.spec.ts
+        new file:   Semana_4/node/src/shared/infra/Typeorm/migrations/1604352613405-AddUserIdToAppointments.ts
+        modified:   Semana_4/node/src/shared/infra/http/routes/index.ts
+
+---
+
 # [0.0.38] - 30/10/2020
 ## Profile Route
 ## Show Profile Service

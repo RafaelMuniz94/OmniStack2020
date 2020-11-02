@@ -1,6 +1,5 @@
 import "reflect-metadata";
-import AppError from "@shared/errors/AppError";
-import FindAllUsersService from '@users/services/FindAllUsersService'
+import FindAllUsersService from '@modules/users/services/FindAllUsersService'
 import FakeUsersRepository from '@users/repositories/fakes/FakeUsersRepository'
 import Users from '@users/infra/Typeorm/entities/Users'
 
