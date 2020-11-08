@@ -2,6 +2,7 @@
 //     expect(1+2).toBe(3)// usada em todos o testes
 // })
 import fakeAppointmentsRepository from "../../repositories/fakes/fakeAppointmentsRepository";
+import FakeCacheProvider from "@shared/container/providers/CacheProvider/fakes/FakeCacheProvider";
 import CreateAppointmentService from "../CreateAppointmentService";
 import FakeNotificationRepository from "@notifications/services/fake/FakeNotificationRepository";
 import AppError from "@shared/errors/AppError";
@@ -10,12 +11,15 @@ describe("CreateAppointment", () => {
   let fakeRepository: fakeAppointmentsRepository;
   let createService: CreateAppointmentService;
   let fakeNotification: FakeNotificationRepository;
+  let fakeCacheProvider: FakeCacheProvider;
   beforeEach(() => {
     fakeRepository = new fakeAppointmentsRepository();
     fakeNotification = new FakeNotificationRepository();
+    fakeCacheProvider = new FakeCacheProvider();
     createService = new CreateAppointmentService(
       fakeRepository,
-      fakeNotification
+      fakeNotification,
+      fakeCacheProvider
     );
   });
   //test('Create an appointment',) ou

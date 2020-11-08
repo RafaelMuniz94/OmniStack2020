@@ -9,8 +9,13 @@ import uploadConfig from "@config/upload";
 import AppError from "@shared/errors/AppError";
 import "@shared/container" // Importando container de dependencias
 import {errors} from "celebrate"
+import RateLimiter from '@shared/infra/http/middlewares/RateLimiter'
 const app = express();
 
+
+
+
+app.use(RateLimiter)
 app.use(Cors({
   origin: 'http://localhost:3000'// Para ambiente de dev 
 }));// Evita que sites nao confiaveis a aplicacao acessem a api.

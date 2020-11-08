@@ -1,3 +1,46 @@
+# [0.0.42] - 08/11/2020
+## Cache
+## Cache Provider
+## Redis Integration with IORedis
+## IORedis Dependecy
+## Unity Test Improvements
+## Redis Dependency
+## Rate Limiter dependecy
+## Rate Limiter middleware
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_4/node/.env.example
+        modified:   Semana_4/node/ormconfig.example.json
+        modified:   Semana_4/node/package.json
+        new file:   Semana_4/node/src/config/cache.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/AppointmentController.ts
+        modified:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/ListProviderAppointmentsService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/ListProvidersService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/tests/CreateAppointmentService.spec.ts
+        modified:   Semana_4/node/src/modules/appointments/services/tests/ListProviderAppointmentsService.spec.ts
+        modified:   Semana_4/node/src/modules/appointments/services/tests/ListProvidersService.spec.ts
+        modified:   Semana_4/node/src/modules/users/repositories/fakes/FakeUsersRepository.ts
+        modified:   Semana_4/node/src/modules/users/services/AuthenticateUserService.ts
+        modified:   Semana_4/node/src/modules/users/services/CreateUserService.ts
+        modified:   Semana_4/node/src/modules/users/services/tests/AuthenticateUserService.spec.ts
+        modified:   Semana_4/node/src/modules/users/services/tests/CreateUserService.spec.ts
+        modified:   Semana_4/node/src/modules/users/services/tests/ResetPasswordService.spec.ts
+        modified:   Semana_4/node/src/modules/users/services/tests/UpdateUserAvatarService.spec.ts
+        new file:   Semana_4/node/src/shared/container/providers/CacheProvider/fakes/FakeCacheProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/CacheProvider/implementations/RedisCacheProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/CacheProvider/index.ts
+        new file:   Semana_4/node/src/shared/container/providers/CacheProvider/models/ICacheProvider.ts
+        modified:   Semana_4/node/src/shared/container/providers/index.ts
+        new file:   Semana_4/node/src/shared/infra/http/middlewares/RateLimiter.ts
+        modified:   Semana_4/node/src/shared/infra/http/server.ts
+        modified:   Semana_4/node/yarn-error.log
+        modified:   Semana_4/node/yarn.lock
+
+---
+
 # [0.0.41] - 07/11/2020
 ## Enviroment variables
 ## Class Transformer Dependency

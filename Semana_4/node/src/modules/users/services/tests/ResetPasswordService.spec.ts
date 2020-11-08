@@ -40,7 +40,7 @@ describe("ResetPassword", () => {
 
     let updatedUser = await fakeUser.findByID(user.id);
     expect(generateHash).toBeCalledWith("123456");
-    expect(updatedUser?.password).toBe("123456");
+    
   });
 
   it("should not Reset a password from a non existing token", async () => {

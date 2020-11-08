@@ -9,11 +9,11 @@ export default class AppointmentController {
     let { provider_id, date } = request.body;
     let user_id = request.user.id;
 
-    let parsedDate = getParsedHour(date);
+    //let parsedDate = getParsedHour(date); Removido pois o Joi ao validar o formato de data ja converte
     let createService = container.resolve(CreateAppointmentService);
 
     let appointment = await createService.execute({
-      parsedDate,
+      parsedDate: date,
       user_id,
       provider_id,
     });

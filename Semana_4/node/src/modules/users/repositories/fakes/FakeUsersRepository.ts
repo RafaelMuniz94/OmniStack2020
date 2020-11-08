@@ -4,7 +4,7 @@ import Users from "@users/infra/Typeorm/entities/Users";
 import { uuid } from "uuidv4";
 import IUserRepository from "@users/repositories/IUsersRepository";
 
-class UsersRepository implements IUserRepository {
+class FakeUsersRepository implements IUserRepository {
   private users: Users[] = [];
 
   public async findAll(): Promise<Users[]> {
@@ -17,7 +17,7 @@ class UsersRepository implements IUserRepository {
   }: ICreateUserDTO): Promise<Users> {
     let user = new Users();
 
-    Object.assign(user, { id: uuid(), name, email, password });
+    Object.assign(user, { id: uuid(), name, email, password});
 
     this.users.push(user);
 
@@ -49,4 +49,4 @@ class UsersRepository implements IUserRepository {
   }
 }
 
-export default UsersRepository;
+export default FakeUsersRepository;

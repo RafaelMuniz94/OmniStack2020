@@ -1,5 +1,5 @@
 import IUsersRepository from "@users/repositories/IUsersRepository";
-import IHashProvider from '@users/providers/HashProvider/Models/IHashProvider'
+import IHashProvider from "@users/providers/HashProvider/Models/IHashProvider";
 import { sign } from "jsonwebtoken"; // Assina o token
 import AppError from "../../../shared/errors/AppError";
 import User from "../infra/Typeorm/entities/Users";
@@ -32,12 +32,18 @@ class AuthenticateUserService {
 
     if (!user) throw new AppError("Incorrect email/password combination.", 401);
     let passwordReceived = user.password || "";
-    let passwordMatched = await this.hashProvider.compareHash(password, passwordReceived);
+    let passwordMatched = await this.hashProvider.compareHash(
+      password,
+      passwordReceived
+    );
 
     if (!passwordMatched)
       throw new AppError("Incorrect email/password combination.", 401);
 
-    let token = sign({ name: user.name }, authConfig.jwt.secret, {
+    let secret = authConfig.jwt.secret;
+    if (!secret) throw new AppError("Secret must be provided!");
+
+    let token = sign({ name: user.name }, secret, {
       subject: user.id, // qual user criou o token
       expiresIn: authConfig.jwt.expiresIn,
     });

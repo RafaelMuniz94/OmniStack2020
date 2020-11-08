@@ -1,9 +1,10 @@
 import Appointments from "../infra/Typeorm/entities/Appointments";
 import AppError from "@shared/errors/AppError";
 import IAppointmentsRepository from "../repositories/IAppointmentsRepository";
-import INotificationsRepository from "@notifications/repositories/INotificationsRepository"
+import INotificationsRepository from "@notifications/repositories/INotificationsRepository";
 import { injectable, inject } from "tsyringe";
-import { isBefore, getHours,format } from "date-fns";
+import { isBefore, getHours, format } from "date-fns";
+import ICacheProvider from "@shared/container/providers/CacheProvider/models/ICacheProvider";
 
 interface IRequestDTO {
   user_id: string;
@@ -15,10 +16,12 @@ interface IRequestDTO {
 class CreateAppointmentService {
   constructor(
     @inject("AppointmentsRepository")
-    private appointmentsRepository: IAppointmentsRepository ,// Cria automaticamente a variavel dentro da classe
+    private appointmentsRepository: IAppointmentsRepository, // Cria automaticamente a variavel dentro da classe
 
     @inject("NotificationRepository")
-    private notificationRepository: INotificationsRepository
+    private notificationRepository: INotificationsRepository,
+    @inject("CacheProvider")
+    private cacheProvider: ICacheProvider
   ) {}
 
   public async execute({
@@ -53,9 +56,17 @@ class CreateAppointmentService {
 
     await this.notificationRepository.create({
       recipient_id: provider_id,
-      content:`Novo agendamento para dia ${format(parsedDate,"dd/MM/yyyy 'às' HH:mm.")}`
-    })
+      content: `Novo agendamento para dia ${format(
+        parsedDate,
+        "dd/MM/yyyy 'às' HH:mm."
+      )}`,
+    });
 
+    let cacheKey = `provider-appointments:${provider_id}:${format(
+      parsedDate,
+      "yyyy-M-d"
+    )}`;
+    await this.cacheProvider.invalidate(cacheKey);
     return appointment;
   } // Esse metodo deve ser unico no service
 }
