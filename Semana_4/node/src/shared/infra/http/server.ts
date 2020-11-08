@@ -1,4 +1,5 @@
 import "reflect-metadata"
+import 'dotenv/config' // Para importar um JS precisa colocar no tsconfig a opcao AllowJS
 import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors"; // Para poder tratar errors async, deve estar abaixo da importacao do express
 import routes from "./routes";
@@ -7,6 +8,7 @@ import "@shared/infra/Typeorm";
 import uploadConfig from "@config/upload";
 import AppError from "@shared/errors/AppError";
 import "@shared/container" // Importando container de dependencias
+import {errors} from "celebrate"
 const app = express();
 
 app.use(Cors({
@@ -20,6 +22,7 @@ app.get("/", (request, response) => {
   return response.json({ message: "Hello World" });
 });
 
+app.use(errors())// Trativa de erros de dados ao serem validados, deve estar antes do exception handle global (abaixo)
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
     if (err instanceof AppError) {
@@ -38,6 +41,7 @@ app.use(
   }
 ); //Middlewares para tratativa de erros no express devem receber 4 parametros e sempre ficar apos a utilizacao das demais rotas
 
-app.listen(3333, () => {
-  console.log("Running 🚀");
+let port = process.env.APP_PORT
+app.listen(port, () => {
+  console.log(`Running on ${port} 🚀`);
 });

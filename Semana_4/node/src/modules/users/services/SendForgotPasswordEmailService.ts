@@ -37,13 +37,13 @@ class SendForgotPasswordEmailService {
         email: user.email,
         name: user.name,
       },
-      from: { email: "equipe@gobarber.com", name: "Equipe GoBarber" },
+      //from: { email: "equipe@gobarber.com", name: "Equipe GoBarber" },
       templateData: {
         file,
         variables: {
           name: user.name,
           token,
-          link: `http://localhost:3000/reset_password?token=${token}`,
+          link: `${process.env.APP_WEB_URL}/reset_password?token=${token}`,
           senderName: "Equipe GoBarber"
         },
       },

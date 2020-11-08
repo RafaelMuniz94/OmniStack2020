@@ -7,7 +7,7 @@ import IFindAllInMonthFromProviderDTO from "@appointments/Dtos/IFindAllInMonthFr
 import IFindAllInDayFromProviderDTO from "@modules/appointments/Dtos/IFindAllInDayFromProviderDTO";
 
 class AppointmentsRepository implements IAppointmentsRepository {
-  public appointments: Appointments[] = [];
+  private appointments: Appointments[] = [];
   public async findByDate(parsedDate: Date): Promise<Appointments | undefined> {
     let findAppointment = this.appointments.find(
       (appointment) => appointment.date === parsedDate

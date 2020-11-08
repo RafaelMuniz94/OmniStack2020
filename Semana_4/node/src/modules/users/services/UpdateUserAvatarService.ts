@@ -22,15 +22,15 @@ class UpdateUserAvatarService {
     avatarFileName,
   }: IRequestDTO): Promise<Users> {
     const user = await this.userRepository.findByID(user_id);
-
+    
     if (!user)
-      throw new AppError("Only authenticated users can change avatar.", 401);
-
+    throw new AppError("Only authenticated users can change avatar.", 401);
+    
     if (user.avatar) {
       //Deletar avatar anterior
-
       await this.storageProvider.deleteFile(user.avatar);
     }
+    
     let fileName = await this.storageProvider.saveFile(avatarFileName);
     user.avatar = fileName;
     await this.userRepository.save(user); // pode ser usado para salvar e atualizar

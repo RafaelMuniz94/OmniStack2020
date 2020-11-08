@@ -6,7 +6,8 @@ dist/
 coverage/
 Semana_2/node/src/config/auth.ts
 uploads/
-
-
+.env
+ormconfig.json
+*.sql
 Semana_2/node/tmp/*
 !Semana_2/node/tmp/.gitkeep

@@ -4,14 +4,14 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-} from 'typeorm';
-
-
+} from "typeorm";
+import { Exclude, Expose } from "class-transformer";
+import uploadConfig from "@config/upload";
 // KISS - Keep It simple & Stupid
 
-@Entity('users')
+@Entity("users")
 class Users {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn("uuid")
   id: string;
 
   @Column()
@@ -21,6 +21,7 @@ class Users {
   email: string;
 
   @Column()
+  @Exclude()
   password?: string;
 
   @Column()
@@ -32,6 +33,21 @@ class Users {
   @UpdateDateColumn()
   updated_at: Date;
 
+  @Expose({ name: "avatar_url" })
+  getAvatar_url(): string | null {
+    if (!this.avatar) return null;
+
+    let path;
+    switch (uploadConfig.driver) {
+      case "s3":
+        path = `${process.env.AWS_BUCKET_URL}/${this.avatar}`;
+        break;
+      default:
+        path = `${process.env.APP_API_URL}/files/uploads/${this.avatar}`;
+        break;
+    }
+    return path;
+  }
 }
 
 export default Users;

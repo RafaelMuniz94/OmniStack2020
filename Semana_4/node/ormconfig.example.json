@@ -1,0 +1,25 @@
+[
+  {
+    "name": "",
+    "type": "",
+    "host": "",
+    "port": 3333,
+    "username": "",
+    "password": "",
+    "database": "",
+    "entities": ["./src/modules/**/infra/Typeorm/entities/*.ts"],
+    "migrations": ["./src/shared/infra/Typeorm/migrations/*.ts"],
+    "cli": {
+      "migrationsDir": "./src/shared/infra/Typeorm/migrations/"
+    }
+  },
+  {
+    "name": "",
+    "type": "",
+    "host": "",
+    "port": ,
+    "database": "",
+    "entities": ["./src/modules/**/infra/Typeorm/schemas/*.ts"],
+    "useUnifiedTopology":true
+  }
+]

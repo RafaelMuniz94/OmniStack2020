@@ -1,8 +1,9 @@
 import Appointments from "../infra/Typeorm/entities/Appointments";
 import AppError from "@shared/errors/AppError";
 import IAppointmentsRepository from "../repositories/IAppointmentsRepository";
+import INotificationsRepository from "@notifications/repositories/INotificationsRepository"
 import { injectable, inject } from "tsyringe";
-import { isBefore, getHours } from "date-fns";
+import { isBefore, getHours,format } from "date-fns";
 
 interface IRequestDTO {
   user_id: string;
@@ -14,7 +15,10 @@ interface IRequestDTO {
 class CreateAppointmentService {
   constructor(
     @inject("AppointmentsRepository")
-    private appointmentsRepository: IAppointmentsRepository // Cria automaticamente a variavel dentro da classe
+    private appointmentsRepository: IAppointmentsRepository ,// Cria automaticamente a variavel dentro da classe
+
+    @inject("NotificationRepository")
+    private notificationRepository: INotificationsRepository
   ) {}
 
   public async execute({
@@ -46,6 +50,11 @@ class CreateAppointmentService {
       user_id,
       date: parsedDate,
     });
+
+    await this.notificationRepository.create({
+      recipient_id: provider_id,
+      content:`Novo agendamento para dia ${format(parsedDate,"dd/MM/yyyy 'às' HH:mm.")}`
+    })
 
     return appointment;
   } // Esse metodo deve ser unico no service

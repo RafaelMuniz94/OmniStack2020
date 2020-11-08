@@ -1,3 +1,96 @@
+# [0.0.41] - 07/11/2020
+## Enviroment variables
+## Class Transformer Dependency
+## Amazon SES Mail Provider
+## Providers container organization improved
+## Amazon S3 bucket integration
+## Mime integration
+
+**Changed Files**
+
+        modified:   .gitignore
+        modified:   Changelog.md
+        new file:   Semana_4/node/.env.example
+        new file:   Semana_4/node/ormconfig.example.json
+        deleted:    Semana_4/node/ormconfig.json
+        new file:   Semana_4/node/package-lock.json
+        modified:   Semana_4/node/package.json
+        modified:   Semana_4/node/src/config/auth.ts
+        new file:   Semana_4/node/src/config/mail.ts
+        modified:   Semana_4/node/src/config/upload.ts
+        new file:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderAppointmentController.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/http/routes/appointments.routes.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/http/routes/providers.routes.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/fakes/fakeAppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        new file:   Semana_4/node/src/modules/appointments/services/ListProviderAppointmentsService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/tests/CreateAppointmentService.spec.ts
+        new file:   Semana_4/node/src/modules/appointments/services/tests/ListProviderAppointmentsService.spec.ts
+        new file:   Semana_4/node/src/modules/notifications/dtos/ICreateNotificationDTO.ts
+        new file:   Semana_4/node/src/modules/notifications/infra/Typeorm/schemas/Notification.ts
+        new file:   Semana_4/node/src/modules/notifications/repositories/INotificationsRepository.ts
+        new file:   Semana_4/node/src/modules/notifications/repositories/NotificationsRepository.ts
+        new file:   Semana_4/node/src/modules/notifications/services/fake/FakeNotificationRepository.ts
+        modified:   Semana_4/node/src/modules/users/infra/Typeorm/entities/Users.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/controllers/ProfileController.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/controllers/SessionController.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/controllers/UserAvatarController.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/controllers/UserController.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/routes/password.routes.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/routes/profile.routes.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/routes/sessions.routes.ts
+        modified:   Semana_4/node/src/modules/users/infra/http/routes/users.routes.ts
+        modified:   Semana_4/node/src/modules/users/services/SendForgotPasswordEmailService.ts
+        modified:   Semana_4/node/src/modules/users/services/UpdateUserAvatarService.ts
+        modified:   Semana_4/node/src/shared/container/index.ts
+        new file:   Semana_4/node/src/shared/container/providers/MailTemplateProvider/index.ts
+        new file:   Semana_4/node/src/shared/container/providers/SendEmailProvider/implementations/SESMailProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/SendEmailProvider/index.ts
+        new file:   Semana_4/node/src/shared/container/providers/StorageProviders/implementations/S3StorageProvider.ts
+        new file:   Semana_4/node/src/shared/container/providers/StorageProviders/index.ts
+        modified:   Semana_4/node/src/shared/container/providers/index.ts
+        modified:   Semana_4/node/src/shared/infra/Typeorm/index.ts
+        modified:   Semana_4/node/src/shared/infra/http/server.ts
+        deleted:    Semana_4/node/tmp/9ccad2a57b39ee5a2543-avatar.jpg
+        modified:   Semana_4/node/tsconfig.json
+        modified:   Semana_4/node/yarn-error.log
+        modified:   Semana_4/node/yarn.lock
+
+---
+
+# [0.0.40] - 02/11/2020
+## List Provider appointments in a Day
+## Notification Repository
+## Fake Notification Repository
+## MongoDb integration
+## MongoDb typeorm configuration
+
+**Changed Files**
+
+        modified:   Changelog.md
+        modified:   Semana_4/node/ormconfig.json
+        new file:   Semana_4/node/package-lock.json
+        modified:   Semana_4/node/package.json
+        new file:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderAppointmentController.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/http/routes/appointments.routes.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/http/routes/providers.routes.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/fakes/fakeAppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        new file:   Semana_4/node/src/modules/appointments/services/ListProviderAppointmentsService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/tests/CreateAppointmentService.spec.ts
+        new file:   Semana_4/node/src/modules/appointments/services/tests/ListProviderAppointmentsService.spec.ts
+        new file:   Semana_4/node/src/modules/notifications/dtos/ICreateNotificationDTO.ts
+        new file:   Semana_4/node/src/modules/notifications/infra/Typeorm/schemas/Notification.ts
+        new file:   Semana_4/node/src/modules/notifications/repositories/INotificationsRepository.ts
+        new file:   Semana_4/node/src/modules/notifications/repositories/NotificationsRepository.ts
+        new file:   Semana_4/node/src/modules/notifications/services/fake/FakeNotificationRepository.ts
+        modified:   Semana_4/node/src/shared/container/index.ts
+        modified:   Semana_4/node/src/shared/infra/Typeorm/index.ts
+        modified:   Semana_4/node/tsconfig.json
+        modified:   Semana_4/node/yarn.lock
+
+---
+
 # [0.0.39] - 02/11/2020
 ## Month Availability Service
 ## Month Availability test
