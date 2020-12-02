@@ -2,6 +2,7 @@ import { inject, injectable } from "tsyringe";
 import { getDaysInMonth, getDate } from "date-fns";
 import IAppointmentsRepository from "@appointments/repositories/IAppointmentsRepository";
 import AppError from "@shared/errors/AppError";
+import { isAfter } from "date-fns";
 
 interface IRequest {
   provider_id: string;
@@ -48,13 +49,15 @@ export default class ListProviderMonthAvailabilityService {
     );
 
     let availability = eachDayArray.map((day) => {
+      let compareDate = new Date(year, month - 1, day, 23, 59, 59);
       let appointmentsInDay = appointments.filter((appointments) => {
         return getDate(appointments.date) === day;
       });
 
       return {
         day,
-        available: appointmentsInDay.length < 10,
+        available:
+          isAfter(compareDate,new Date()) && appointmentsInDay.length < 10,
       };
     });
 

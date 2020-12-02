@@ -1,3 +1,128 @@
+# [0.0.44] - 02/12/2020
+## Profile Page Done
+## Dashboard Page Done
+**Changed Files**
+
+        modified:   Changelog.md
+        new file:   Semana_4/gobarber/.gitignore
+        new file:   Semana_4/gobarber/README.md
+        new file:   Semana_4/gobarber/package.json
+        new file:   Semana_4/gobarber/public/index.html
+        new file:   Semana_4/gobarber/public/robots.txt
+        new file:   Semana_4/gobarber/src/App.tsx
+        new file:   Semana_4/gobarber/src/Assets/createAccountBackground.png
+        new file:   Semana_4/gobarber/src/Assets/logo.svg
+        new file:   Semana_4/gobarber/src/Assets/sign-in-background.png
+        new file:   Semana_4/gobarber/src/components/Button/index.tsx
+        new file:   Semana_4/gobarber/src/components/Button/styles.ts
+        new file:   Semana_4/gobarber/src/components/ErrorCircle/index.tsx
+        new file:   Semana_4/gobarber/src/components/ErrorCircle/styles.ts
+        new file:   Semana_4/gobarber/src/components/Input/index.tsx
+        new file:   Semana_4/gobarber/src/components/Input/styles.ts
+        new file:   Semana_4/gobarber/src/components/ToastContainer/Toast/index.tsx
+        new file:   Semana_4/gobarber/src/components/ToastContainer/Toast/styles.tsx
+        new file:   Semana_4/gobarber/src/components/ToastContainer/index.tsx
+        new file:   Semana_4/gobarber/src/components/ToastContainer/styles.ts
+        new file:   Semana_4/gobarber/src/components/ToolTip/index.tsx
+        new file:   Semana_4/gobarber/src/components/ToolTip/styles.ts
+        new file:   Semana_4/gobarber/src/hooks/AuthContext.tsx
+        new file:   Semana_4/gobarber/src/hooks/ToastContext.tsx
+        new file:   Semana_4/gobarber/src/hooks/index.tsx
+        new file:   Semana_4/gobarber/src/index.tsx
+        new file:   Semana_4/gobarber/src/pages/Dashboard/index.tsx
+        new file:   Semana_4/gobarber/src/pages/Dashboard/styles.tsx
+        new file:   Semana_4/gobarber/src/pages/ForgotPassword/index.tsx
+        new file:   Semana_4/gobarber/src/pages/ForgotPassword/styles.ts
+        new file:   Semana_4/gobarber/src/pages/Profile/index.tsx
+        new file:   Semana_4/gobarber/src/pages/Profile/styles.ts
+        new file:   Semana_4/gobarber/src/pages/ResetPassword/index.tsx
+        new file:   Semana_4/gobarber/src/pages/ResetPassword/styles.ts
+        new file:   Semana_4/gobarber/src/pages/SignIn/index.tsx
+        new file:   Semana_4/gobarber/src/pages/SignIn/styles.ts
+        new file:   Semana_4/gobarber/src/pages/SignUp/index.tsx
+        new file:   Semana_4/gobarber/src/pages/SignUp/styles.ts
+        new file:   Semana_4/gobarber/src/react-app-env.d.ts
+        new file:   Semana_4/gobarber/src/routes/Route.tsx
+        new file:   Semana_4/gobarber/src/routes/index.tsx
+        new file:   Semana_4/gobarber/src/services/api.ts
+        new file:   Semana_4/gobarber/src/setupTests.ts
+        new file:   Semana_4/gobarber/src/styles/global.ts
+        new file:   Semana_4/gobarber/src/utils/getValidationErrors.ts
+        new file:   Semana_4/gobarber/tsconfig.json
+        new file:   Semana_4/gobarber/yarn.lock
+        modified:   Semana_4/node/src/modules/appointments/infra/Typeorm/entities/Appointments.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/Typeorm/repositories/AppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderAppointmentController.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderDailyAvailabilityController.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderMonthAvailabilityController.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/IAppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/fakes/fakeAppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/ListProviderAppointmentsService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/ListProviderMonthAvailabilityService.ts
+        modified:   Semana_4/node/src/modules/users/infra/Typeorm/entities/Users.ts
+        modified:   Semana_4/node/src/modules/users/services/SendForgotPasswordEmailService.ts
+
+---
+
+# [0.0.43] - 16/11/2020
+## API Improvements
+## GoBarber Copy
+
+**Changed Files**
+
+        modified:   Changelog.md
+        new file:   Semana_4/gobarber/.gitignore
+        new file:   Semana_4/gobarber/README.md
+        new file:   Semana_4/gobarber/package.json
+        new file:   Semana_4/gobarber/public/index.html
+        new file:   Semana_4/gobarber/public/robots.txt
+        new file:   Semana_4/gobarber/src/App.tsx
+        new file:   Semana_4/gobarber/src/Assets/createAccountBackground.png
+        new file:   Semana_4/gobarber/src/Assets/logo.svg
+        new file:   Semana_4/gobarber/src/Assets/sign-in-background.png
+        new file:   Semana_4/gobarber/src/components/Button/index.tsx
+        new file:   Semana_4/gobarber/src/components/Button/styles.ts
+        new file:   Semana_4/gobarber/src/components/ErrorCircle/index.tsx
+        new file:   Semana_4/gobarber/src/components/ErrorCircle/styles.ts
+        new file:   Semana_4/gobarber/src/components/Input/index.tsx
+        new file:   Semana_4/gobarber/src/components/Input/styles.ts
+        new file:   Semana_4/gobarber/src/components/ToastContainer/Toast/index.tsx
+        new file:   Semana_4/gobarber/src/components/ToastContainer/Toast/styles.tsx
+        new file:   Semana_4/gobarber/src/components/ToastContainer/index.tsx
+        new file:   Semana_4/gobarber/src/components/ToastContainer/styles.ts
+        new file:   Semana_4/gobarber/src/components/ToolTip/index.tsx
+        new file:   Semana_4/gobarber/src/components/ToolTip/styles.ts
+        new file:   Semana_4/gobarber/src/hooks/AuthContext.tsx
+        new file:   Semana_4/gobarber/src/hooks/ToastContext.tsx
+        new file:   Semana_4/gobarber/src/hooks/index.tsx
+        new file:   Semana_4/gobarber/src/index.tsx
+        new file:   Semana_4/gobarber/src/pages/Dashboard/index.tsx
+        new file:   Semana_4/gobarber/src/pages/Dashboard/styles.tsx
+        new file:   Semana_4/gobarber/src/pages/SignIn/index.tsx
+        new file:   Semana_4/gobarber/src/pages/SignIn/styles.ts
+        new file:   Semana_4/gobarber/src/pages/SignUp/index.tsx
+        new file:   Semana_4/gobarber/src/pages/SignUp/styles.ts
+        new file:   Semana_4/gobarber/src/react-app-env.d.ts
+        new file:   Semana_4/gobarber/src/routes/Route.tsx
+        new file:   Semana_4/gobarber/src/routes/index.tsx
+        new file:   Semana_4/gobarber/src/services/api.ts
+        new file:   Semana_4/gobarber/src/setupTests.ts
+        new file:   Semana_4/gobarber/src/styles/global.ts
+        new file:   Semana_4/gobarber/src/utils/getValidationErrors.ts
+        new file:   Semana_4/gobarber/tsconfig.json
+        new file:   Semana_4/gobarber/yarn.lock
+        modified:   Semana_4/node/src/modules/appointments/infra/Typeorm/repositories/AppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderAppointmentController.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderDailyAvailabilityController.ts
+        modified:   Semana_4/node/src/modules/appointments/infra/controllers/ProviderMonthAvailabilityController.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/IAppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/repositories/fakes/fakeAppointmentsRepository.ts
+        modified:   Semana_4/node/src/modules/appointments/services/CreateAppointmentService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/ListProviderAppointmentsService.ts
+        modified:   Semana_4/node/src/modules/appointments/services/ListProviderMonthAvailabilityService.ts
+
+---
 # [0.0.42] - 08/11/2020
 ## Cache
 ## Cache Provider

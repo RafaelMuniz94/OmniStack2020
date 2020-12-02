@@ -9,7 +9,7 @@ import {
   JoinColumn,
 } from "typeorm";
 
-import User from "@users/infra/Typeorm/entities/Users";
+import Users from "@users/infra/Typeorm/entities/Users";
 
 // A model é responsavel pela estrutura do dado que a aplicacao utiliza
 @Entity("appointments")
@@ -20,16 +20,16 @@ class Appointments {
   @Column()
   provider_id: string;
 
-  @ManyToOne(() => User) // Relacao Muitos para UM
+  @ManyToOne(() => Users) // Relacao Muitos para UM
   @JoinColumn({ name: "provider_id" }) // Relacao Muitos para UM
-  provider: User;
+  provider: Users;
 
   @Column()
   user_id: string;
 
-  @ManyToOne(() => User)
-  @JoinColumn({ name: `user_id` })
-  user: User;
+  @ManyToOne(() => Users, user => user.appointments)
+  @JoinColumn({ name: "user_id" })
+  user: Users;
 
   @Column("timestamp with time zone")
   date: Date;

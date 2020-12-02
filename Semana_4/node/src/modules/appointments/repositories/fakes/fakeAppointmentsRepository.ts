@@ -8,9 +8,14 @@ import IFindAllInDayFromProviderDTO from "@modules/appointments/Dtos/IFindAllInD
 
 class AppointmentsRepository implements IAppointmentsRepository {
   private appointments: Appointments[] = [];
-  public async findByDate(parsedDate: Date): Promise<Appointments | undefined> {
+  public async findByDate(
+    parsedDate: Date,
+    provider_id: string
+  ): Promise<Appointments | undefined> {
     let findAppointment = this.appointments.find(
-      (appointment) => appointment.date === parsedDate
+      (appointment) =>
+        appointment.date === parsedDate &&
+        appointment.provider_id === provider_id
     );
 
     return findAppointment;
@@ -30,7 +35,7 @@ class AppointmentsRepository implements IAppointmentsRepository {
         getYear(appointment.date) === year
     );
 
-    return appointments
+    return appointments;
   }
 
   public async findAllInMonthFromProvider({
@@ -54,7 +59,7 @@ class AppointmentsRepository implements IAppointmentsRepository {
     provider_id,
   }: ICreateAppointmentsDTO): Promise<Appointments> {
     const appointment = new Appointments();
-    Object.assign(appointment, { id: uuid(), date,user_id, provider_id });
+    Object.assign(appointment, { id: uuid(), date, user_id, provider_id });
 
     this.appointments.push(appointment);
 

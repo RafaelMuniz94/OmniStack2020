@@ -4,9 +4,11 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  OneToMany
 } from "typeorm";
 import { Exclude, Expose } from "class-transformer";
 import uploadConfig from "@config/upload";
+import Appointments from "@appointments/infra/Typeorm/entities/Appointments"
 // KISS - Keep It simple & Stupid
 
 @Entity("users")
@@ -32,6 +34,10 @@ class Users {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+
+  @OneToMany(() => Appointments, appointment => appointment.user_id)
+  appointments:Appointments[]
 
   @Expose({ name: "avatar_url" })
   getAvatar_url(): string | null {
